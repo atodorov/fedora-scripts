@@ -41,4 +41,6 @@ for f in `find $SEARCH_IN -name "*.src.rpm"`; do
         echo "^^^^^ $f"
     fi
     popd
+
+    rm -rf "$BUILD_DIR" # to save space
 done
