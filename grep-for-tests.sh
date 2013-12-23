@@ -34,6 +34,9 @@ for f in `find $SEARCH_IN -name "*.src.rpm"`; do
     # extract the sources
     rpmbuild -bp $f
 
+# NB: ^^^ this doesn't work for src.rpm files. Only --rebuild does
+# I have another script to explode the contents but it is not yet open source
+
     BUILD_DIR=`basename $f | sed -r 's/.fc20.src.rpm//' | rev | cut -f2- -d- | rev`
     pushd "~/rpmbuild/BUILD/$BUILD_DIR"
     find -type f | egrep "test/|tests/";
