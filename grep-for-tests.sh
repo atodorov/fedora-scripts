@@ -32,18 +32,15 @@ fi
 
 for f in `find $SEARCH_IN -name "*.src.rpm"`; do
     # extract the sources
-    rpmbuild -bp $f
+    ./tools/extract-srpm-grok $f ~/rpmbuild/BUILD >/dev/null 2>&1
 
-# NB: ^^^ this doesn't work for src.rpm files. Only --rebuild does
-# I have another script to explode the contents but it is not yet open source
+# NB: the script to explode the contents is not yet open source b/c
+# I'm not the author and have to ask before adding it to this repo.
 
-    BUILD_DIR=`basename $f | sed -r 's/.fc20.src.rpm//' | rev | cut -f2- -d- | rev`
-    pushd "~/rpmbuild/BUILD/$BUILD_DIR"
-    find -type f | egrep "test/|tests/";
+    find ~/rpmbuild/BUILD/ -type f | egrep "test/|tests/";
     if [ $? == 0 ]; then # grep matched something
         echo "^^^^^ $f"
     fi
-    popd
 
-    rm -rf "$BUILD_DIR" # to save space
+    rm -rf ~/rpmbuild/BUILD/ # to save space
 done
