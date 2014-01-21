@@ -32,10 +32,7 @@ fi
 
 for f in `find $SEARCH_IN -name "*.src.rpm"`; do
     # extract the sources
-    ./tools/extract-srpm-grok $f ~/rpmbuild/BUILD >/dev/null 2>&1
-
-# NB: the script to explode the contents is not yet open source b/c
-# I'm not the author and have to ask before adding it to this repo.
+    ./tools/extract-srpm $f ~/rpmbuild/BUILD >/dev/null 2>&1
 
     find ~/rpmbuild/BUILD/ -type f | egrep "test/|tests/";
     if [ $? == 0 ]; then # grep matched something
