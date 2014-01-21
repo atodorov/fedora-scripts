@@ -1,0 +1,289 @@
+#!/bin/bash
+#
+################################################################################
+#
+#   Copyright (c) 2009-2013, Tomas Hoger <thoger@redhat.com>
+#   Copyright (c) 2014,      Alexander Todorov <atodorov@redhat.com>
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+#
+################################################################################
+#
+# extract src.rpm 
+#
+# extracts source rpm to a destination directory:
+#   destdir/
+#
+# cleans-up source files after extraction
+#
+
+set -eu
+
+# find path to install directory and source settings
+basename=`basename "$0"`
+basedir=$(dirname $(readlink -f "${BASH_SOURCE[0]}"))
+
+# split nvr to n, v and r.  input can be one of n/v/r, n-v-r, or n-v-r.src.rpm
+split_nvr() {
+     local nvr=${1%.src.rpm} ; shift
+
+     # use more strict regex in the n-v-r case to avoid mis-handling component
+     # names with 2 or more dashes in the name
+     if [[ "$nvr" =~ ^.*/[^-]*/[^-]*$ ]]; then
+             echo "$nvr" | sed 's,/, ,g'
+     elif [[ "$nvr" =~ ^.*-[^-]*[0-9][^-]*-[^-]*[0-9][^-]*$ ]]; then
+             echo "$nvr" | sed -r 's,^(.*)-([^-]*)-([^-]*)$,\1 \2 \3,'
+     else
+             # error, invalid format
+             return 1
+     fi
+}
+
+# settings and defaults
+buildmode='-bp'
+nodeps='yes'
+dryrun='no'
+fuzz0='no'
+keeprpmdir='no'
+tmpdir=`mktemp -d`
+cmdspath="$basedir"
+patchcmd="$cmdspath/fake.patch"
+configurecmd="$cmdspath/fake.configure"
+rpmmacros=
+
+
+# usage information
+usage() {
+	cat <<EOM
+
+Usage: $basename [options] src.rpm destdir
+
+  --build      run rpmbuild -bb instead of rpmbuild -bp (implies --deps)
+  --deps       do not run rpmbuild with --nodeps option
+  --nodeps     force --nodeps even with --build
+  --fuzz0      do NOT "%define _default_patch_fuzz 2"
+  --tmpdir     specifies temporary directory to which src.rpm is installed
+  --keeprpmdir don't delete directory where sources are extracted 
+  --rpmmacros  path to file with additional rpm marcros to define
+  --dryrun     only print rpmbuild command line, do not run it
+  --help       this help
+
+EOM
+}
+
+
+# parse command line arguments
+TEMP=`getopt -a -n "$basename" -o h \
+		--long help,build,deps,nodeps,dryrun,fuzz0,keeprpmdir,tmpdir:,rpmmacros: -- "$@"`
+if [ $? -ne 0 ]; then
+	usage
+	exit 1
+fi
+eval set -- "$TEMP"
+
+while true; do
+	case "$1" in
+		--build)
+			buildmode='-bb'
+			if [ -z "$nodeps" ]; then
+				nodeps='no'
+			fi;
+			shift ;;
+		--deps)
+			nodeps='no'  ; shift ;;
+		--nodeps)
+			nodeps='yes' ; shift ;;
+		-h|--help)
+			usage ; exit 0 ;;
+		--fuzz0)
+			fuzz0='yes'  ; shift ;;
+		--dryrun)
+			dryrun='yes' ; shift ;;
+		--keeprpmdir)
+			keeprpmdir='yes' ; shift ;;
+		--tmpdir)
+			tmpdir="$2"
+			if ! [[ "$tmpdir" =~ '^/' ]]; then
+				# rpmbuild requires absolute paths
+				tmpdir="$PWD/$tmpdir"
+			fi
+			if [ ! -d "$tmpdir" ]; then
+				echo "Error: temporary directory '$tmpdir' not found!" >&2
+				exit 1
+			fi
+			shift 2 ;;
+		--rpmmacros)
+			rpmmacros="$2"
+			if [ ! -f "$rpmmacros" ]; then
+				echo "Error: rpm macros file '$rpmmacros' not found!" >&2
+				exit 1;
+			fi
+			shift 2 ;;
+		--)
+			shift; break ;;
+	esac
+done
+
+# check if arguments were provided too
+if [ $# -ne 2 ]; then
+	usage
+	exit 1
+fi
+
+srpm="$1"
+if [ ! -f "$srpm" ]; then
+	echo "Error: file '$srpm' not found!" >&2
+	exit 1
+fi
+
+destdir="$2"
+mkdir -p "$destdir"
+
+# rpmbuild requires absolute paths
+if ! destdir=`readlink -e "$destdir"`  || [ ! -d "$destdir" ]; then
+	echo "Error: target directory '$2' not found!" >&2
+	exit 1
+fi
+
+echo "DEBUG 1: $destdir"
+
+# extract n-v-r
+read nam ver rel < <( split_nvr "`basename "$srpm"`" )
+
+
+# temporary directory to which src.rpm is extracted
+if [ "$tmpdir" ]; then
+	base_rpm_dir="$tmpdir/$basename-XXXXXXXXXX"
+else
+	base_rpm_dir="$destdir/$nam/$basename-XXXXXXXXXX"
+fi
+
+if ! base_rpm_dir=`mktemp -d "$base_rpm_dir"` ; then
+	echo "Error: unable to create temporary directory!" >&2
+	exit 1
+fi
+
+# create directory structure
+mkdir -p "$base_rpm_dir"/{BUILD,RPMS,SRPMS,SPECS,SOURCES}
+
+
+# install srpm
+rpmcmd="rpm -ivh \"$srpm\" --define \"_topdir $base_rpm_dir\""
+echo "+ $rpmcmd"
+eval "$rpmcmd"
+
+
+# find .spec file
+if [ -f "$base_rpm_dir/SPECS/$nam.spec" ]; then
+	specf="$base_rpm_dir/SPECS/$nam.spec"
+else
+	# some guess work - list srpm and use first .spec found
+	specf=`rpm -qlp "$srpm" 2> /dev/null | grep '\.spec$' | head -n1`
+	specf="$base_rpm_dir/SPECS/$specf"
+fi
+
+
+# various spec file ugliness hacks, but do create spec backup first
+cp -p "$specf" "$specf.extract-srpm-bak"
+
+# hack around no longer supported tags
+sed -i -e 's/^Copyright:/License:/i' "$specf"
+sed -i -e 's/^Serial:/Epoch:/i' "$specf"
+
+# hack around architecture restrictions
+sed -i -e 's/^ExclusiveArch:/#ExclusiveArch:/i' "$specf"
+sed -i -e 's/^ExcludeArch:/#ExcludeArch:/i' "$specf"
+
+# rpm 4.9.0 and later no longer accepts (Build)Requires(junk) used in some specs
+sed -i -e 's/^Requires(hint)/Requires/' "$specf"
+sed -i -e 's/^Requires(devel)/Requires/' "$specf"
+sed -i -e 's/^Requires(triggerpostun)/Requires/' "$specf"
+sed -i -e 's/^BuildRequires(check)/BuildRequires/' "$specf"
+
+# replace special macros (e.g. used by scl) by standard ones
+sed -i -e 's/%{pkg_name}/%{name}/' "$specf"
+sed -i -e 's/%{PACKAGE_VERSION}/%{version}/' "$specf"
+
+# some specs not only call configure in %prep, but also use ./configure or
+# sh ./configure instead of the %configure, sigh...
+sed -i -e '/%prep/,/%build/s,^\./configure,%configure,' "$specf"
+sed -i -e '/%prep/,/%build/s,^sh \./configure,%configure,' "$specf"
+
+# some specs try to run local autogen / auto(re)conf scripts in %prep, which
+# may cause an error - just ignore them
+for script in '\./autogen.sh' 'NOCONFIGURE=1 \./autogen.sh' \
+	'\./buildconf' '\./util/autoconf/autoreconf' './util/reconf' '\./test' ; do
+	sed -i -e "/%prep/,/%build/s,^$script,#$script," "$specf"
+done
+
+# don't use full path for jar, expanded from %{jar}
+sed -i -e '/%prep/,/%build/s,%{jar},jar,' "$specf"
+
+# don't use full path for pkg-config
+sed -i -e '/%prep/,/%build/s,/usr/bin/pkg-config,pkg-config,' "$specf"
+
+# touch -r often used to avoid multilib conflicts caused by patching and using
+# patch backup file as reference file
+sed -i -e '/%prep/,/%build/s,^touch -r,#touch -r,' "$specf"
+
+# don't care about node.js packages dependency fixing that require extra rpm
+# macro
+sed -i -e '/%prep/,/%build/s,^%nodejs_fixdep,#nodejs_fixdep,' "$specf"
+
+
+# prepare rpmbuild command
+
+# base command
+rpmcmd="rpmbuild $buildmode \"$specf\" --define \"_topdir $base_rpm_dir\" \
+	--define \"_builddir $destdir\""
+
+# deal with patch fuzz (F10+)
+# by default, do "%define _default_patch_fuzz 2" for backwards compatibility
+if [ "$fuzz0" != 'yes' ]; then
+	rpmcmd="$rpmcmd --define '_default_patch_fuzz 2'"
+fi
+
+# check if --nodeps should be used
+if [ -z "$nodeps"  -o  "$nodeps" == 'yes' ]; then
+	rpmcmd="$rpmcmd --nodeps"
+fi
+
+# use alternate patch and configure commands
+if [ "$patchcmd" ]; then
+	rpmcmd="$rpmcmd --define \"__patch $patchcmd\""
+fi
+if [ "$configurecmd" ]; then
+	rpmcmd="$rpmcmd --define \"configure $configurecmd\""
+fi
+
+# additional macros to read form file and define
+if [ "$rpmmacros" ]; then
+	while read line ; do
+		[[ "$line" =~ ^# ]] && continue
+		rpmcmd="$rpmcmd --define \"$line\""
+	done < "$rpmmacros"
+fi
+
+echo
+echo "+ $rpmcmd"
+if [ "$dryrun" == 'no' ]; then
+	eval "PATH=$cmdspath:$PATH $rpmcmd" && retval=$? || retval=$?
+fi
+
+
+# cleanup
+cp -a "$specf.extract-srpm-bak" "$destdir/`basename "$specf"`"
+[ "$keeprpmdir" = 'yes' ] || rm -rf "$base_rpm_dir"
+
+exit ${retval:-0}
+
