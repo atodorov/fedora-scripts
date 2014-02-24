@@ -34,7 +34,7 @@ for f in `find $SEARCH_IN -name "*.src.rpm"`; do
     # extract the sources
     ./tools/extract-srpm $f ~/rpmbuild/BUILD >/dev/null 2>&1
 
-    find ~/rpmbuild/BUILD/ -type f | egrep "SelfTest/|test/|tests/|t/|testing/|test_utils/|tests_utils/|testsuite/|tests.py|test.py|test_regex.py"
+    find ~/rpmbuild/BUILD/ -type f | egrep "SelfTest/|test/|tests/|/t/|testing/|test_utils/|tests_utils/|testsuite/|tests.py|test.py|test_regex.py"
     if [ $? == 0 ]; then # grep matched something
         echo "^^^^^ $f"
     fi
