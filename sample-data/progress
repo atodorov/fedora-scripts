@@ -1,2 +1,11 @@
-2014 Feb 24th - SRPMs with tests in DVD - 1087 - after script update
-2013 Dec 24th - SRPMs with tests in DVD - 870  - initial data
+SRPMs with tests in DVD
+-----------------------
+
+2014 Feb 24th - 1087 - after script update based on Fedora 20
+2013 Dec 24th - 870  - initial data based on Fedora 20
+
+
+SRPMs with %check in DVD
+------------------------
+
+2014 Feb 25th - 738 - initial measurement based on Fedora 20
