@@ -1,1631 +1,738 @@
-%check
-^^^^^ /mnt/fedora/a/abrt-2.1.9-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/a/abrt-java-connector-1.0.6-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/a/acl-2.2.52-4.fc20.src.rpm
-# %%check
-%check
-- %%check: try harder to make work in mock (using xvfb)
-- %%check: make test should pass 100% now
-^^^^^ /mnt/fedora/a/akonadi-1.10.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/a/amarok-2.8.0-3.fc20.src.rpm
-%check
-- Run tests in %%check instead of %%build
-^^^^^ /mnt/fedora/a/ant-1.9.2-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/a/apper-0.8.1-1.fc20.src.rpm
-%check
-- fix %%check for non-multilib 64-bit platforms
-- drop %%check section entirely; inappropriate to run in build env.
-^^^^^ /mnt/fedora/a/apr-1.4.8-2.fc20.src.rpm
-%check
-- rework tests in %%check (1.2.x got tests from trunk)
-- enable malloc paranoia in %%check
-^^^^^ /mnt/fedora/a/apr-util-1.5.2-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/a/ark-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/a/at-3.1.13-13.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/a/attica-0.4.2-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/a/attr-2.4.47-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/a/audit-2.3.2-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/a/autoconf-2.69-13.fc20.src.rpm
-%check
-- tune %%check to show testsuite.log when failed
-- add %%check (#174674)
-^^^^^ /mnt/fedora/a/automake-1.13.4-5.fc20.src.rpm
-%check
-- %%check section
-^^^^^ /mnt/fedora/a/avogadro-1.0.3-19.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/b/babl-0.1.10-8.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/b/bash-4.2.45-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/b/bash-completion-2.1-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/b/bind-9.9.4-8.fc20.src.rpm
-# Do not use %%check as it is run after %%install where libbfd.so is rebuild
-^^^^^ /mnt/fedora/b/binutils-2.23.88.0.1-13.fc20.src.rpm
-%check
-- run test suite in %%check
-^^^^^ /mnt/fedora/b/bison-2.7-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/b/blinken-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/b/bluedevil-2.0.0-0.4.20131015git.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/b/bomber-4.11.3-1.fc20.src.rpm
-%check
-- (#182414: boost: put tests in %%check section) via Rex Dieter
-^^^^^ /mnt/fedora/b/boost-1.54.0-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/b/bovo-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/b/byacc-1.9.20130304-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/c/calligra-2.7.4-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/c/cantor-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/c/ccache-3.1.9-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/c/cfitsio-3.350-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/c/check-0.9.10-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/c/cln-1.3.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/c/clucene-2.3.3.4-10.fc20.src.rpm
-%check
-- Use parallel ctest in %%check
-- Add %%check section
-^^^^^ /mnt/fedora/c/cmake-2.8.12.1-1.fc20.src.rpm
-%check
-- Add one test to the %%check section and BR diffutils.
-^^^^^ /mnt/fedora/c/compface-1.5.2-16.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/c/coreutils-8.21-18.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/c/cpio-2.11-24.fc20.src.rpm
-%check
-- add a %%check script to catch things like #249210
-^^^^^ /mnt/fedora/c/cracklib-2.9.0-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/c/cryptopp-5.6.2-3.fc20.src.rpm
-- add %%check for php extension
-^^^^^ /mnt/fedora/c/cups-1.7.0-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/c/cups-filters-1.0.41-4.fc20.src.rpm
-%check
-- drop the hide_selinux.c hack no longer needed in %%check
-^^^^^ /mnt/fedora/c/curl-7.32.0-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/c/cvs-1.11.23-33.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/d/d-feet-0.3.7-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/d/dbus-1.6.12-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/d/dbus-java-2.7-12.fc19.src.rpm
-# for %%check
-%check
-^^^^^ /mnt/fedora/d/dbus-python-1.2.0-1.fc20.src.rpm
-%check
-- fix %%check
-^^^^^ /mnt/fedora/d/dbusmenu-qt-0.9.2-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/d/dejavu-fonts-2.34-1.fc20.src.rpm
-# %%check
-%check
-- run %%check in Fedora only, there's no atf package in RHEL
-  - added %%check - upstream unit tests (Automated Test Framework - ATF)
-^^^^^ /mnt/fedora/d/dhcp-4.2.5-26.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/d/diffstat-1.57-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/d/diffutils-3.3-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/d/digikam-3.5.0-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/d/ding-libs-0.3.0.1-18.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/d/dnf-0.4.8-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/d/dragon-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/e/e2fsprogs-1.42.8-3.fc20.src.rpm
-%check
-- do "make check" in %%check, not %%install, section.
-^^^^^ /mnt/fedora/e/elfutils-0.157-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/e/enca-1.14-2.fc20.src.rpm
-%check
-- Add %%check section
-^^^^^ /mnt/fedora/e/environment-modules-3.2.10-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/e/exempi-2.2.1-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/e/exiv2-0.23-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/e/expat-2.1.0-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/f/Field3D-1.3.2-12.fc20.src.rpm
-%check
-- %%check || : does not work anymore.
-- Add %%check.
-^^^^^ /mnt/fedora/f/fakeroot-1.18.4-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/f/farstream02-0.2.3-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/f/fftw-3.3.3-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/f/filezilla-3.7.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/f/findutils-4.5.11-4.fc20.src.rpm
-%check
-- add %%check
-^^^^^ /mnt/fedora/f/flac-1.3.0-3.fc20.src.rpm
-%check
-  bigcheck' to `%%check' part, where it belongs anyway, so that flexes
-- add %%check script
-^^^^^ /mnt/fedora/f/flex-2.5.37-4.fc20.src.rpm
-%check
-- move tests to %%check section
-^^^^^ /mnt/fedora/f/fltk-1.3.2-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/f/fontconfig-2.11.0-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/f/fros-1.0-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gawk-4.1.0-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gc-7.2d-3.fc20.src.rpm
-%check
-- for Fedora 20+ test -fstack-protector-strong during %%check instead
-^^^^^ /mnt/fedora/g/gcc-4.8.2-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gd-2.1.0-3.fc20.src.rpm
-%check
- - Separate testsuite run to its %%check section.
-^^^^^ /mnt/fedora/g/gdb-7.6.50.20130731-16.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gdbm-1.10-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gedit-3.10.2-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gegl-0.2.0-12.fc20.src.rpm
-%check
-- add %%check to run make check
-^^^^^ /mnt/fedora/g/gettext-0.18.3.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gfs2-utils-3.1.6-3.fc20.src.rpm
-%check
-- fix %check
-^^^^^ /mnt/fedora/g/ghc-7.6.3-18.2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gimp-2.8.8-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gjs-1.38.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/glade-3.16.0-1.fc20.src.rpm
- * explain %%check ppc exception
-^^^^^ /mnt/fedora/g/glib2-2.38.2-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gmp-5.1.2-2.fc20.src.rpm
-%configure %checkoption
-%check
-^^^^^ /mnt/fedora/g/gnome-abrt-0.3.3-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gnome-mahjongg-3.10.2-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gnome-session-3.10.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gnome-software-3.10.4-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gnome-system-monitor-3.10.2-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gnome-terminal-3.10.2-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gnome-weather-3.10.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gnupg-1.4.15-1.fc20.src.rpm
-%check
-- %%check: be permissive about failures (for now)
--   add %%check section
-^^^^^ /mnt/fedora/g/gnupg2-2.0.22-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gnutls-3.1.16-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gperftools-2.1-2.fc20.src.rpm
-%check 
-- make check in the %%check section.
-^^^^^ /mnt/fedora/g/gpgme-1.3.2-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/granatier-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/graphite2-1.2.2-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/grep-2.15-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/grubby-8.28-1.fc20.src.rpm
-%check
-- self test moved to %%check section
-^^^^^ /mnt/fedora/g/gsl-1.15-9.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gsm-1.0.13-10.fc20.src.rpm
-- Remove %%check again, it causes trouble
-^^^^^ /mnt/fedora/g/gtk3-3.10.4-1.fc20.src.rpm
-%check
-- Added %%check section
-^^^^^ /mnt/fedora/g/gtkmm30-3.10.1-1.fc20.src.rpm
-%check
-- add %%check
-^^^^^ /mnt/fedora/g/guile-2.0.9-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gutenprint-5.2.9-14.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gwebsockets-0.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/g/gwenview-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/h/hawkey-0.4.5-1.fc20.src.rpm
-%check
-- Add %%check
-^^^^^ /mnt/fedora/h/hdf5-1.8.11-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/h/hmaccalc-0.9.13-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/h/hspell-1.2-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/h/httpd-2.4.6-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/h/hunspell-1.3.2-14.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/h/hunspell-ko-0.5.5-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/h/hwloc-1.7-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/h/hyphen-2.8.6-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/i/ibus-libpinyin-1.6.92-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/i/ibus-typing-booster-1.2.5-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/i/icedtea-web-1.4.1-0.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/i/icu-50.1.2-10.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/i/ilmbase-1.0.3-7.fc20.src.rpm
-#%%check
-^^^^^ /mnt/fedora/i/imsettings-1.6.6-1.fc20.src.rpm
-%check
-- add %%check
-^^^^^ /mnt/fedora/i/indent-2.2.11-12.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/i/initial-setup-0.3.10.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/i/inkscape-0.48.4-10.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/i/ipython-0.13.2-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/i/iris-1.0.0-0.15.20110904svn812.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/j/jansson-2.4-3.fc20.src.rpm
-%check
-- token %%check section
-^^^^^ /mnt/fedora/j/jasper-1.900.1-25.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/j/javapackages-tools-3.4.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/j/jbigkit-2.0-9.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/j/jemalloc-3.4.0-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/j/jovie-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/k3b-2.0.2-20.20130927git.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kajongg-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kalgebra-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kalzium-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kamoso-2.0.2-14.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kanagram-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kapman-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kate-4.11.3-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/katomic-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kblackbox-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kblocks-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kbounce-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kbreakout-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kbruch-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kcalc-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kcharselect-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kcolorchooser-4.11.3-1.fc20.src.rpm
-%check
-- %%check: desktop-file-validate
-^^^^^ /mnt/fedora/k/kde-baseapps-4.11.3-2.fc20.src.rpm
-%check
-- %%check: desktop-file-validate
-^^^^^ /mnt/fedora/k/kde-runtime-4.11.3-2.fc20.src.rpm
-%check
-- %%check: desktop-file-validate
-^^^^^ /mnt/fedora/k/kde-workspace-4.11.3-1.fc20.src.rpm
-- %%check: desktop-file-validate
-^^^^^ /mnt/fedora/k/kdeaccessibility-4.11.3-1.fc20.src.rpm
-# %%%check
-%check
-- %%check: support regression tests (default off)
-^^^^^ /mnt/fedora/k/kdelibs-4.11.3-9.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kdepim-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kdepim-runtime-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kdevelop-4.5.2-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kdiamond-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kfourinline-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kgeography-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kget-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kgoldrunner-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kgpg-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/khangman-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kig-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kigo-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/killbots-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kiriki-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kiten-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kjumpingcube-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/klettres-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/klickety-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/klines-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kmag-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kmahjongg-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kmines-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kmix-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kmousetool-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kmouth-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kmplot-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/knavalbattle-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/knetwalk-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kolf-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kollision-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kolourpaint-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/konquest-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/konsole-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/konversation-1.5-0.6.20130929.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kpat-4.11.3-1.fc20.src.rpm
-%check
-- don't break during %%check when the session keyring is revoked
-- during %%check, run check in the library and kdc subdirectories, which
-^^^^^ /mnt/fedora/k/krb5-1.11.3-33.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kreversi-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kruler-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/krusader-2.4.0-0.10.beta3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kscd-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kshisen-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/ksirk-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/ksnakeduel-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/ksnapshot-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kspaceduel-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/ksquares-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kstars-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/ksudoku-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/ktorrent-4.3.1-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/ktouch-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/ktuberling-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kturtle-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kubrick-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/k/kwordquiz-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/langtable-0.0.23-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/leveldb-1.12.0-5.fc20.src.rpm
-%check
-- added %%check section
-^^^^^ /mnt/fedora/l/libEMF-1.0.7-3.fc20.src.rpm
-%check
-- %%check: pkg-config sanity
-^^^^^ /mnt/fedora/l/libQtGTL-0.9.3-2.fc20.src.rpm
-%check
-- enable testsuite in the %%check phase
-^^^^^ /mnt/fedora/l/libarchive-3.1.2-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libassuan-2.1.0-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libbsd-0.6.0-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libcap-ng-0.7.3-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libcdio-0.90-3.fc20.src.rpm
-%check devel
-^^^^^ /mnt/fedora/l/libcomps-0.1.4-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libconfig-1.4.9-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libcroco-0.6.8-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libdmtx-0.7.2-11.fc20.src.rpm
-##%%check
-^^^^^ /mnt/fedora/l/libeina-1.7.8-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libev-4.15-1.fc20.src.rpm
-%check
-- Add %%check
-- Moved "make verify" into %%check
-^^^^^ /mnt/fedora/l/libevent-2.0.21-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libexif-0.6.21-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libexttextcat-3.4.3-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libfm-1.1.2.2-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libgcrypt-1.5.3-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libgdata-0.14.0-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libgdither-0.6-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libgee-0.12.0-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libgee06-0.6.8-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libgovirt-0.1.0-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libgpg-error-1.12-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libidn-1.28-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libjpeg-turbo-1.3.0-1.fc20.src.rpm
-%check
-- add %%check section
-^^^^^ /mnt/fedora/l/libkdcraw-4.11.3-1.fc20.src.rpm
-%check
-- add %%check section
-^^^^^ /mnt/fedora/l/libkexiv2-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libkipi-4.11.3-1.fc20.src.rpm
-%check
-- enable make check on %%check
-^^^^^ /mnt/fedora/l/libkkc-0.3.1-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libkolab-0.4.2-3.fc20.src.rpm
-%check
-- Export LD_LIBRARY_PATH so tests can be run in %%check
-^^^^^ /mnt/fedora/l/libkolabxml-0.8.4-3.fc20.src.rpm
-%check
-- add basic %%check section
-^^^^^ /mnt/fedora/l/libksane-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/liblastfm-1.0.7-2.fc20.src.rpm
-#%check
-^^^^^ /mnt/fedora/l/liblouis-2.5.3-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libmbim-1.5.0-1.20130815git.fc20.src.rpm
-%check
-- Added %%check section
-^^^^^ /mnt/fedora/l/libmetalink-0.1.2-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libmodman-2.0.1-7.fc20.src.rpm
-%check
-- Run tests in the %%check section.
-^^^^^ /mnt/fedora/l/libmodplug-0.8.8.4-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libmpc-1.0.1-2.fc20.src.rpm
-%check
-- add %%check section (disabled by default, pending cppunit detection issues)
-^^^^^ /mnt/fedora/l/libmusicbrainz3-3.0.3-7.fc20.src.rpm
-- add %%check section (disabled by default, pending cppunit detection issues)
-^^^^^ /mnt/fedora/l/libmusicbrainz5-5.0.1-8.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libmygpo-qt-1.0.7-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libnice-0.1.4-2.fc20.src.rpm
-%check
-- Added a %%check stanza.
-^^^^^ /mnt/fedora/l/libopenraw-0.0.9-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/liborcus-0.5.1-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libosinfo-0.2.7-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libpinyin-0.9.94-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libpipeline-1.2.4-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libpng-1.6.3-3.fc20.src.rpm
-%check 
-- include %%check section (not used, by default)
-^^^^^ /mnt/fedora/l/libpqxx-3.2-0.5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libproxy-0.4.11-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libpwquality-1.2.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libqb-0.16.0-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libquvi-0.9.2-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libqzeitgeist-0.8.0-10.fc20.src.rpm
-#%check
-^^^^^ /mnt/fedora/l/libreoffice-4.1.3.2-9.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/librepo-1.4.0-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libreport-2.1.9-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libsamplerate-0.1.8-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libserf-1.2.1-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libsilc-1.1.10-10.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libsndfile-1.0.25-8.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libsolv-0.4.0-1.gitd49d319.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libssh2-1.4.3-8.fc20.src.rpm
-%check
-- rearranged %%check to reflect execution order
-^^^^^ /mnt/fedora/l/libtasn1-3.3-2.fc20.src.rpm
-%check
-- make check moved to %check section (#1017070)
-- Move make check to %%check.
-^^^^^ /mnt/fedora/l/libtiff-4.0.3-12.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libtomcrypt-1.17-21.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libtool-2.4.2-21.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libunwind-1.1-3.fc20.src.rpm
-# For %%check
-%check
-- Fix the -2 change, %%check should fail on test suite failure
-  - Move Python library test to %%check
-^^^^^ /mnt/fedora/l/libuser-0.60-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libvirt-1.1.3.1-2.fc20.src.rpm
-# for %%check
-%check
-- On F15, %%check needs xorg-x11-xauth, too
-- new %%check section (yay for xvfb-run)
-^^^^^ /mnt/fedora/l/libvncserver-0.9.9-9.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libvorbis-1.3.3-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libwpd-0.9.9-1.fc20.src.rpm
-#%check
-^^^^^ /mnt/fedora/l/libxdg-basedir-1.2.0-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libxml2-2.9.1-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libxslt-1.1.28-5.fc20.src.rpm
-%check
-- Enable %%check section
-^^^^^ /mnt/fedora/l/libyaml-0.1.4-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/libyubikey-1.10-2.fc20.src.rpm
-%check
-- add %%check (mostly useless now, but wip)
-^^^^^ /mnt/fedora/l/lightdm-1.8.5-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/llvm-3.3-0.10.rc3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/logrotate-3.8.7-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/loudmouth-1.4.3-13.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/lskat-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/ltrace-0.7.2-7.fc20.src.rpm
-%check
-- Added %%check macro to execute tests
-^^^^^ /mnt/fedora/l/lua-expat-1.2.0-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/lua-json-1.3.2-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/lua-lgi-0.7.1-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/lua-lpeg-0.12-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/lyx-2.0.6-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/l/lzo-2.06-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/m/ModemManager-1.1.0-2.git20130913.fc20.src.rpm
-%check
-- enable %%check again
-- Drop %%check again.  SIGPIPE is set to SIG_IGN in mock, which breaks the
-- Add %%check
-^^^^^ /mnt/fedora/m/m4-1.4.16-10.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/m/mailcap-2.1.42-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/m/make-3.82-19.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/m/man-db-2.6.5-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/m/marble-4.11.3-1.fc20.src.rpm
-%check
-- Test-suite is run in %%check
-^^^^^ /mnt/fedora/m/mariadb-5.5.33a-2.fc20.src.rpm
-- remove %%check and use %%install for desktop-file-validate
-^^^^^ /mnt/fedora/m/mate-character-map-1.6.1-0.1.git2464a6c.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/m/mate-document-viewer-1.6.1-7.fc20.src.rpm
-- Remove un-needed %%check section
-^^^^^ /mnt/fedora/m/mate-panel-1.6.1-4.fc20.src.rpm
-##%%check
-^^^^^ /mnt/fedora/m/mercurial-2.8-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/m/mesa-9.2.3-1.20131114.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/m/mesa-demos-8.1.0-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/m/mhash-0.9.9.9-8.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/m/mobile-broadband-provider-info-1.20120614-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/m/mozjs17-17.0.0-8.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/m/mpfr-3.1.2-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/m/mscore-1.3-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/m/mythes-1.2.3-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/n/NetworkManager-openvpn-0.9.8.2-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/n/NetworkManager-pptp-0.9.8.2-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/n/NetworkManager-vpnc-0.9.8.2-2.fc20.src.rpm
-%check
-- %%check: do autotests
-^^^^^ /mnt/fedora/n/nepomuk-core-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/n/net-snmp-5.7.2-15.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/n/netpbm-10.61.02-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/n/nettle-2.6-3.fc20.src.rpm
-%check
-- Add %%check.
-^^^^^ /mnt/fedora/n/nkf-2.1.2-9.fc20.src.rpm
-%check
-- Run the nspr test suite in the %%check section
-^^^^^ /mnt/fedora/n/nspr-4.10.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/n/nss-3.15.2-3.fc20.src.rpm
-%check
-- Add lowhash to test suites to run in the %%check section
-^^^^^ /mnt/fedora/n/nss-softokn-3.15.2-2.fc20.src.rpm
-%check
-- fix segfault within %%check on 2.7 (patch 2)
-^^^^^ /mnt/fedora/n/numpy-1.8.0-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/o/OpenColorIO-1.0.8-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/o/OpenEXR-1.7.1-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/o/OpenGTL-0.9.18-8.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/o/OpenImageIO-1.2.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/o/okteta-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/o/okular-4.11.3-1.fc20.src.rpm
-# the font file. We can add %%check secion once 'make check' is fixed
-- Removed %%check section because 'make check' brings font file back.
-- Removed rm command in %%check section.
-- Added 'rm' command to remove font file in %%check section because
-^^^^^ /mnt/fedora/o/open-vm-tools-9.4.0-1.fc20.src.rpm
-%check
-- added %%check
-^^^^^ /mnt/fedora/o/openbabel-2.3.2-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/o/opencc-0.4.3-2.fc20.src.rpm
-%check
-- Disable %%check on ppc64
-^^^^^ /mnt/fedora/o/opencv-2.4.6.1-1.fc20.src.rpm
-%check
-- add %%check section
-^^^^^ /mnt/fedora/o/openjpeg-1.5.1-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/o/openmpi-1.7.2-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/o/opensp-1.5.2-18.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/o/openssh-6.3p1-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/o/openssl-1.0.1e-30.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/o/openvpn-2.3.2-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/o/optipng-0.7.4-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/o/opus-1.0.3-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/o/orc-0.4.18-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/PyQt4-4.10.2-2.fc20.src.rpm
-%check
-- Run self tests in %%check
-^^^^^ /mnt/fedora/p/p11-kit-0.20.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/palapeli-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/pam-1.1.8-1.fc20.src.rpm
-# %check
-^^^^^ /mnt/fedora/p/pam_krb5-2.4.8-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/parley-4.11.3-1.fc20.src.rpm
-%check
-- Add %%check section to the specfile, invoking make check
-^^^^^ /mnt/fedora/p/parted-3.1-13.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/patch-2.7.1-7.fc20.src.rpm
-%check
-- Created %%check section (bug #226234).
-^^^^^ /mnt/fedora/p/patchutils-0.3.3-4.fc20.src.rpm
-%check
-  because tests need to link against just-compiled library in %%check phase)
-^^^^^ /mnt/fedora/p/pcre-8.33-2.fc20.1.src.rpm
-# We can skip %%check phase
-# XXX: We cannot rewrite ./perl before %%check phase. Otherwise the test
-%check
-^^^^^ /mnt/fedora/p/perl-5.18.1-288.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Algorithm-Diff-1.1902-19.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-AnyEvent-7.05-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-AnyEvent-AIO-1.1-13.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-AnyEvent-BDB-1.1-13.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-App-cpanminus-1.6927-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Archive-Extract-0.68-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Archive-Tar-1.92-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Archive-Zip-1.30-13.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-B-Hooks-EndOfScope-0.12-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-B-Lint-1.17-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-BDB-1.90-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-BSD-Resource-1.29.07-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Business-ISBN-2.06-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Business-ISBN-Data-20120719.001-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-CGI-3.63-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-CPAN-Meta-2.132140-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-CPAN-Meta-Requirements-2.122-292.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-CPAN-Meta-YAML-0.010-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-CPANPLUS-0.91.40-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-CPANPLUS-Dist-Build-0.70-292.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Carp-1.26-245.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Class-Load-0.20-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Class-Singleton-1.4-16.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Compress-Raw-Bzip2-2.062-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Compress-Raw-Zlib-2.062-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Coro-6.32-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-DBD-MySQL-4.024-1.fc20.src.rpm
-%check
-- enable and run %%check in C locale
-^^^^^ /mnt/fedora/p/perl-DBD-Pg-2.19.3-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-DBD-SQLite-1.40-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-DBI-1.630-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-DBIx-Simple-1.35-9.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-DB_File-1.830-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Data-Dumper-2.145-292.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Data-OptList-0.108-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Date-Manip-6.41-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-DateTime-1.03-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-DateTime-Locale-0.45-8.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-DateTime-TimeZone-1.63-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Devel-GlobalDestruction-0.12-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Devel-PartialDump-0.15-11.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Digest-1.17-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Digest-MD5-2.53-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Digest-SHA-5.85-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Digest-SHA1-2.13-10.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Dist-CheckConflicts-0.09-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-EV-4.11-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Encode-2.54-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Encode-Locale-1.03-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Env-1.04-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Error-0.17021-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Eval-Closure-0.08-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Event-1.21-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Exporter-5.68-293.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-ExtUtils-MakeMaker-6.72-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-ExtUtils-Manifest-1.63-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-ExtUtils-ParseXS-3.18-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-FCGI-0.74-10.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-File-BaseDir-0.03-16.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-File-CheckTree-4.42-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-File-DesktopEntry-0.05-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-File-Fetch-0.44-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-File-Listing-6.04-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-File-MimeInfo-0.17-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-File-Path-2.09-292.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-File-Temp-0.23.01-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Filter-1.49-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Getopt-Long-2.42-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Guard-1.022-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-HTML-Parser-3.71-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-HTML-Tagset-3.20-18.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-HTTP-Cookies-6.01-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-HTTP-Daemon-6.01-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-HTTP-Date-6.02-8.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-HTTP-Message-6.06-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-HTTP-Negotiate-6.01-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-HTTP-Tiny-0.034-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-IO-AIO-4.15-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-IO-Compress-2.062-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-IO-HTML-1.00-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-IO-Socket-IP-0.22-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-IO-Socket-SSL-1.955-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-IPC-Cmd-0.84-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Image-ExifTool-9.27-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-JSON-PP-2.27203-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-LWP-MediaTypes-6.02-4.fc20.src.rpm
-%check
-- Remove '|| :' from %%check section.
-^^^^^ /mnt/fedora/p/perl-Linux-Pid-0.04-20.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-List-MoreUtils-0.33-11.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Locale-Codes-3.26-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Locale-Maketext-1.23-292.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Log-Message-0.08-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Log-Message-Simple-0.10-292.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-MRO-Compat-0.12-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Module-Build-0.40.07-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Module-Implementation-0.07-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Module-Load-0.24-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Module-Load-Conditional-0.54-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Module-Metadata-1.000019-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Module-Pluggable-4.80-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Module-Runtime-0.013-6.fc20.src.rpm
-%check
-  that we don't need to get it from a keyserver in %%check
-^^^^^ /mnt/fedora/p/perl-Module-Signature-0.73-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-MongoDB-0.702.2-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Moose-2.1005-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Net-Daemon-0.48-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Net-HTTP-6.06-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Net-LibIDN-0.12-16.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Net-SSLeay-1.55-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Object-Accessor-0.48-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-PAR-Dist-0.49-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Package-DeprecationManager-0.13-9.fc20.src.rpm
-%check
-- Run Perl::Critic test in %%check too
-^^^^^ /mnt/fedora/p/perl-Package-Generator-1.105-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Package-Stash-0.36-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Package-Stash-XS-0.28-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Params-Check-0.38-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Params-Util-1.07-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Params-Validate-1.08-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Parse-CPAN-Meta-1.4404-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Parse-Yapp-1.05-53.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-PathTools-3.40-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Perl-OSType-1.006-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-PlRPC-0.2020-15.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Pod-Checker-1.60-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Pod-LaTeX-0.61-292.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Pod-Parser-1.61-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Pod-Perldoc-3.20-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Pod-Simple-3.28-292.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Pod-Usage-1.63-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Readonly-1.03-24.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Readonly-XS-1.05-16.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Reaper-1.00-10.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Scalar-List-Utils-1.31-293.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Socket-2.013-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Storable-2.45-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Sub-Exporter-0.987-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Sub-Exporter-Progressive-0.001011-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Sub-Install-0.926-10.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Sub-Name-0.05-11.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Sys-Syslog-0.33-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Task-Weaken-1.04-8.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Term-UI-0.38-1.fc20.src.rpm
-%check
-- remove extra || : from %%check
-^^^^^ /mnt/fedora/p/perl-TermReadKey-2.30-20.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Test-Harness-3.28-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Test-Simple-1.001002-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Text-Diff-1.41-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Text-ParseWords-3.29-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Text-Soundex-3.04-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Text-Unidecode-0.04-21.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Thread-Queue-3.02-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Tie-IxHash-1.22-14.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Time-HiRes-1.9726-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Time-Local-1.2300-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-TimeDate-2.30-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Tk-804.031-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Tk-GraphViz-1.01-10.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Try-Tiny-0.18-1.fc20.src.rpm
-%check
-- remove "|| :" from %%check
-^^^^^ /mnt/fedora/p/perl-URI-1.60-11.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-Variable-Magic-0.52-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-WWW-RobotRules-6.02-8.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-XML-DOM-1.44-20.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-XML-Parser-2.41-11.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-XML-RegExp-0.04-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-XML-XQL-0.68-22.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-YAML-0.84-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-YAML-Tiny-1.56-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-autodie-2.20-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-boolean-0.30-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-common-sense-3.6-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-constant-1.27-292.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-libwww-perl-6.05-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-namespace-clean-0.24-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-parent-0.228-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-podlators-2.5.1-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-threads-1.89-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-threads-shared-1.43-291.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perl-version-0.99.04-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/perltidy-20121207-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/phonon-4.7.0-8.fc20.src.rpm
-%check
-- run tests in %%check
-^^^^^ /mnt/fedora/p/php-5.5.6-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/php-pear-1.9.4-23.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/php-pecl-jsonc-1.3.2-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/php-pecl-mongo-1.4.4-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/picmi-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/pigz-2.2.5-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/polkit-pkla-compat-0.1-3.fc20.src.rpm
-%check
-- %%check: verify pkgconfig sanity
-^^^^^ /mnt/fedora/p/poppler-0.24.3-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/popt-1.13-15.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/procps-ng-3.3.8-14.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/protobuf-2.5.0-5.fc20.src.rpm
-%check
-- Use %%_libdir not %%ifarch in %%check section.
-- Update to 2.0.3, minor and common spec adjustments + LGPL, %%check,
-^^^^^ /mnt/fedora/p/pth-2.0.7-21.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/pulseaudio-4.0-8.gitf81e3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/pycryptopp-0.6.0.1206569328141510525648634803928199668821045408958-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/pygame-1.9.1-14.fc20.src.rpm
-%check
-- add a %%check check; add V=1 to all make invocations
-^^^^^ /mnt/fedora/p/pygobject3-3.10.2-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/pygpgme-0.3-8.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/pykickstart-1.99.48-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/pyliblzma-0.5.3-10.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/pylint-1.0.0-3.fc20.src.rpm
-%check
-- add %%check section
-^^^^^ /mnt/fedora/p/python-2.7.5-9.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-BeautifulSoup-3.2.1-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-IPy-0.75-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-astroid-1.0.0-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-beaker-1.5.4-8.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-bugzilla-0.9.0-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-bunch-1.0.1-5.fc20.src.rpm
-%check
-- BR: python-nose, and run nosetests in %%check
-^^^^^ /mnt/fedora/p/python-cloudfiles-1.7.10-4.fc20.src.rpm
-%check
-- Run benchmark as part of %%check if we have python 2.4 or later
-- Add %%check section and run the test suite in it
-^^^^^ /mnt/fedora/p/python-crypto-2.6.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-cssselect-0.8-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-decorator-3.4.0-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-decoratortools-1.8-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-di-0.3-2.fc20.src.rpm
-%check
-- made %%check verbose, so it is not so boring to watch them run
-^^^^^ /mnt/fedora/p/python-django-1.5.5-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-django14-1.4.8-1.fc20.src.rpm
-%check
-- Enable tests in %check
-^^^^^ /mnt/fedora/p/python-enchant-1.6.5-12.fc20.src.rpm
-- No tests shipped in release, remove %check
-^^^^^ /mnt/fedora/p/python-gitdb-0.5.4-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-kitchen-1.1.1-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-logilab-common-0.60.0-2.fc20.src.rpm
-%check
-- Run the test suite in %%check
-^^^^^ /mnt/fedora/p/python-mako-0.7.3-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-markupsafe-0.18-1.fc20.src.rpm
-%check
-- Add %check section to the spec file (vpodzime)
-^^^^^ /mnt/fedora/p/python-meh-0.27-1.fc20.src.rpm
-%check
-for %%check)
-^^^^^ /mnt/fedora/p/python-nose-1.3.0-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-paramiko-1.10.1-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-paste-1.7.5.1-9.20111221hg1498.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-pexpect-3.0-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-pillow-2.2.1-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-pycurl-7.19.0-17.20120408git9b8f4e38.fc20.src.rpm
-#%%check
-^^^^^ /mnt/fedora/p/python-requests-1.2.3-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-setuptools-1.3.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-simplegeneric-0.8-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-simplejson-3.2.0-2.fc20.src.rpm
-%check
-- add %%check section
-^^^^^ /mnt/fedora/p/python-six-1.4.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-smmap-0.8.1-7.fc20.src.rpm
-%check
-- Add %%check section.
-^^^^^ /mnt/fedora/p/python-tempita-0.5.1-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-twisted-core-12.2.0-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-urllib3-1.7-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-zmq-13.0.2-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/python-zope-event-4.0.2-2.fc20.src.rpm
-%check
-- add %%check section
-^^^^^ /mnt/fedora/p/python-zope-interface-4.0.5-2.fc20.src.rpm
-%check
-- don't run test_openpty and test_pty in %%check
-- stop using runtest.sh in %%check (dropped by upstream), replacing with
-- add %%check section (thanks to Thomas Spura)
-^^^^^ /mnt/fedora/p/python3-3.3.2-8.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/p/pyxdg-0.25-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/q/qemu-1.6.1-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/q/qimageblitz-0.0.6-6.fc20.src.rpm
-%check
-- %%check: +make test, pkgconfig check
-^^^^^ /mnt/fedora/q/qjson-0.8.1-3.fc20.src.rpm
-%check
-- Add %%check section
-^^^^^ /mnt/fedora/q/qoauth-1.0.1-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/q/qpdf-5.0.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/q/qrencode-3.4.2-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/raptor2-2.0.9-2.fc20.src.rpm
-%check
-- %%check: make /usr/bin/rapper not present non-fatal
-^^^^^ /mnt/fedora/r/rasqal-0.9.30-2.fc20.src.rpm
-%check
-- Run tests in %%check
-^^^^^ /mnt/fedora/r/rcs-5.9.0-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/realmd-0.14.6-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/recode-3.6-37.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/redland-1.0.16-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/regexp-1.5-13.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rocs-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rpm-4.11.1-7.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rpmlint-1.5-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/ruby-2.0.0.247-15.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-abrt-0.0.6-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-actionmailer-4.0.0-1.fc20.src.rpm
-%check
-- Set TMPDIR environment at %%check to make it sure all files created
-^^^^^ /mnt/fedora/r/rubygem-actionpack-4.0.0-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-activemodel-4.0.0-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-activerecord-4.0.0-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-activerecord-deprecated_finders-1.0.3-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-activeresource-4.0.0-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-activesupport-4.0.0-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-arel-4.0.0-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-atomic-1.1.9-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-bcrypt-ruby-3.0.1-8.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-bson-1.6.4-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-builder-3.1.4-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-bundler-1.3.5-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-coffee-rails-4.0.0-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-coffee-script-2.2.0-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-daemon_controller-1.1.5-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-dalli-2.6.4-2.fc20.src.rpm
-# %%check section needs rspec-expectations, however rspec-expectations depends
-%check
-^^^^^ /mnt/fedora/r/rubygem-diff-lcs-1.1.3-3.2.fc20.src.rpm
-%check
-- Simplify %%check stage (#530275).
-^^^^^ /mnt/fedora/r/rubygem-erubis-2.7.0-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-execjs-1.4.0-6.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-hike-1.2.1-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-i18n-0.6.4-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-journey-1.0.4-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-jquery-rails-2.0.2-4.fc20.src.rpm
-%check
-- Enable %%check stage.
-^^^^^ /mnt/fedora/r/rubygem-json-1.7.7-101.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-listen-0.4.7-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-mail-2.5.4-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-mime-types-1.19-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-minitest-4.7.0-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-mongo-1.6.4-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-multi_json-1.7.7-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-net-http-persistent-2.9-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-passenger-4.0.18-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-polyglot-0.3.3-4.fc20.src.rpm
-%check
-- Enable %%check
-^^^^^ /mnt/fedora/r/rubygem-rack-1.5.2-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-rack-cache-1.2-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-rack-protection-1.5.0-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-rack-ssl-1.3.2-8.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-rack-test-0.6.2-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-rails-observers-0.1.2-2.fc20.src.rpm
-%check
-- Introduce %%check section (not running tests yet, as they are part of dependency loop).
-^^^^^ /mnt/fedora/r/rubygem-railties-4.0.0-1.fc20.src.rpm
-## %%check
-%check
-- Add BR: rubygem(minitest) for %%check
-- Enable %%check
-^^^^^ /mnt/fedora/r/rubygem-rake-10.0.4-1.fc20.1.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-rdoc-4.0.1-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-ref-1.0.0-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-ruby2ruby-2.0.1-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-ruby_parser-3.1.1-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-sass-3.2.6-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-sass-rails-4.0.0-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-sexp_processor-4.1.5-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-sinatra-1.4.3-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-sprockets-2.8.2-4.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-sprockets-rails-2.0.0-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-sqlite3-1.3.7-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-therubyracer-0.11.0-2.fc19.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-thor-0.18.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-thread_safe-0.1.2-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-tilt-1.3.7-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-treetop-1.4.14-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-tzinfo-0.3.37-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/r/rubygem-uglifier-1.3.0-4.fc20.src.rpm
-# Executing testsuite (enabling %%check section) will cause dependency loop.
-%check
-^^^^^ /mnt/fedora/r/rubygems-2.1.11-113.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/s/samba-4.1.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/s/satyr-0.11-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/s/sed-4.2.2-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/s/seed-3.8.1-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/s/setup-2.8.71-2.fc20.src.rpm
-%check
-- %%check: verify pkg-config --modversion sanity
-^^^^^ /mnt/fedora/s/shared-desktop-ontologies-0.11.0-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/s/slang-2.2.4-11.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/s/snappy-1.1.0-2.fc20.src.rpm
-%check
-- %%check: make verbose (again)
-- %%check: run only virtuosobackendtest (verbosely)
-- fix version, and test to %%check 
-^^^^^ /mnt/fedora/s/soprano-2.9.4-2.fc20.src.rpm
-%check
-- Add another build conditional for enabling %%check
-^^^^^ /mnt/fedora/s/sqlite-3.8.1-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/s/squid-3.3.8-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/s/sssd-1.11.2-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/s/step-4.11.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/s/strace-4.8-1.fc20.src.rpm
-%check
-- run check-swig-py in %%check (#178448)
-^^^^^ /mnt/fedora/s/subversion-1.8.3-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/s/sugar-read-111-1.fc20.src.rpm
-%check
-- Add %%check section and conditionally build with tests.
-^^^^^ /mnt/fedora/t/taglib-1.9.1-2.fc20.src.rpm
-%check
-- add possibility to 'rpmbuild' without %%check phase
-^^^^^ /mnt/fedora/t/tar-1.26-29.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/t/tcl-8.5.14-1.fc20.src.rpm
-%check
-- add %%check
-^^^^^ /mnt/fedora/t/tcpdump-4.5.0-1.20131108gitb07944a.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/t/telepathy-gabble-0.18.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/t/telepathy-glib-0.22.0-1.fc20.src.rpm
-%check
-- Add %%check to run the upstream test suite on each build
-^^^^^ /mnt/fedora/t/telepathy-haze-0.8.0-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/t/telepathy-idle-0.2.0-1.fc20.src.rpm
-%check
-- Add %%check to run the upstream test suite on each build
-^^^^^ /mnt/fedora/t/telepathy-mission-control-5.16.0-2.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/t/thunar-vfs-1.2.0-12.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/t/tk-8.5.14-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/u/ustr-1.0.4-15.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/u/util-linux-2.24-2.fc20.src.rpm
-# For %%build and %%check.
-%check
-  move testing into %%check (#708522)
-^^^^^ /mnt/fedora/v/valgrind-3.9.0-2.fc20.src.rpm
-#%check
-^^^^^ /mnt/fedora/v/vigra-1.9.0-11.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/v/virtuoso-opensource-6.1.6-5.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/w/wxGTK-2.8.12-9.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/x/xapian-bindings-1.2.15-1.fc20.src.rpm
-%check
-- temporary disabled %%check due to RPATH regression
-^^^^^ /mnt/fedora/x/xcb-util-0.3.9-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/x/xcb-util-image-0.3.9-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/x/xcb-util-keysyms-0.3.9-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/x/xcb-util-wm-0.3.9-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/x/xmlrpc-c-1.32.5-1903.svn2451.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/x/xorg-x11-fonts-7.5-9.fc20.src.rpm
-%check
-- add %%check section (<tibbs@math.uh.edu>)
-^^^^^ /mnt/fedora/x/xz-5.1.2-6alpha.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/y/yajl-2.0.4-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/y/yelp-3.10.1-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/y/ykpers-1.13.0-3.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/y/yum-3.4.3-106.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/z/zeromq3-3.2.4-1.fc20.src.rpm
-%check
-^^^^^ /mnt/fedora/z/zlib-1.2.8-3.fc20.src.rpm
+/mnt/fedora/a/abrt-2.1.9-1.fc20.src.rpm
+/mnt/fedora/a/abrt-java-connector-1.0.6-1.fc20.src.rpm
+/mnt/fedora/a/acl-2.2.52-4.fc20.src.rpm
+/mnt/fedora/a/akonadi-1.10.3-1.fc20.src.rpm
+/mnt/fedora/a/amarok-2.8.0-3.fc20.src.rpm
+/mnt/fedora/a/ant-1.9.2-7.fc20.src.rpm
+/mnt/fedora/a/apper-0.8.1-1.fc20.src.rpm
+/mnt/fedora/a/apr-1.4.8-2.fc20.src.rpm
+/mnt/fedora/a/apr-util-1.5.2-4.fc20.src.rpm
+/mnt/fedora/a/ark-4.11.3-1.fc20.src.rpm
+/mnt/fedora/a/at-3.1.13-13.fc20.src.rpm
+/mnt/fedora/a/attica-0.4.2-2.fc20.src.rpm
+/mnt/fedora/a/attr-2.4.47-3.fc20.src.rpm
+/mnt/fedora/a/audit-2.3.2-1.fc20.src.rpm
+/mnt/fedora/a/autoconf-2.69-13.fc20.src.rpm
+/mnt/fedora/a/automake-1.13.4-5.fc20.src.rpm
+/mnt/fedora/a/avogadro-1.0.3-19.fc20.src.rpm
+/mnt/fedora/b/babl-0.1.10-8.fc20.src.rpm
+/mnt/fedora/b/bash-4.2.45-4.fc20.src.rpm
+/mnt/fedora/b/bash-completion-2.1-3.fc20.src.rpm
+/mnt/fedora/b/bind-9.9.4-8.fc20.src.rpm
+/mnt/fedora/b/binutils-2.23.88.0.1-13.fc20.src.rpm
+/mnt/fedora/b/bison-2.7-3.fc20.src.rpm
+/mnt/fedora/b/blinken-4.11.3-1.fc20.src.rpm
+/mnt/fedora/b/bluedevil-2.0.0-0.4.20131015git.fc20.src.rpm
+/mnt/fedora/b/bomber-4.11.3-1.fc20.src.rpm
+/mnt/fedora/b/boost-1.54.0-5.fc20.src.rpm
+/mnt/fedora/b/bovo-4.11.3-1.fc20.src.rpm
+/mnt/fedora/b/byacc-1.9.20130304-2.fc20.src.rpm
+/mnt/fedora/c/calligra-2.7.4-1.fc20.src.rpm
+/mnt/fedora/c/cantor-4.11.3-1.fc20.src.rpm
+/mnt/fedora/c/ccache-3.1.9-4.fc20.src.rpm
+/mnt/fedora/c/cfitsio-3.350-2.fc20.src.rpm
+/mnt/fedora/c/check-0.9.10-3.fc20.src.rpm
+/mnt/fedora/c/cln-1.3.3-1.fc20.src.rpm
+/mnt/fedora/c/clucene-2.3.3.4-10.fc20.src.rpm
+/mnt/fedora/c/cmake-2.8.12.1-1.fc20.src.rpm
+/mnt/fedora/c/compface-1.5.2-16.fc20.src.rpm
+/mnt/fedora/c/coreutils-8.21-18.fc20.src.rpm
+/mnt/fedora/c/cpio-2.11-24.fc20.src.rpm
+/mnt/fedora/c/cracklib-2.9.0-5.fc20.src.rpm
+/mnt/fedora/c/cryptopp-5.6.2-3.fc20.src.rpm
+/mnt/fedora/c/cups-1.7.0-4.fc20.src.rpm
+/mnt/fedora/c/cups-filters-1.0.41-4.fc20.src.rpm
+/mnt/fedora/c/curl-7.32.0-3.fc20.src.rpm
+/mnt/fedora/c/cvs-1.11.23-33.fc20.src.rpm
+/mnt/fedora/d/dbus-1.6.12-1.fc20.src.rpm
+/mnt/fedora/d/dbus-java-2.7-12.fc19.src.rpm
+/mnt/fedora/d/dbusmenu-qt-0.9.2-5.fc20.src.rpm
+/mnt/fedora/d/dbus-python-1.2.0-1.fc20.src.rpm
+/mnt/fedora/d/dejavu-fonts-2.34-1.fc20.src.rpm
+/mnt/fedora/d/d-feet-0.3.7-1.fc20.src.rpm
+/mnt/fedora/d/dhcp-4.2.5-26.fc20.src.rpm
+/mnt/fedora/d/diffstat-1.57-3.fc20.src.rpm
+/mnt/fedora/d/diffutils-3.3-4.fc20.src.rpm
+/mnt/fedora/d/digikam-3.5.0-1.fc20.src.rpm
+/mnt/fedora/d/ding-libs-0.3.0.1-18.fc20.src.rpm
+/mnt/fedora/d/dnf-0.4.8-1.fc20.src.rpm
+/mnt/fedora/d/dragon-4.11.3-1.fc20.src.rpm
+/mnt/fedora/e/e2fsprogs-1.42.8-3.fc20.src.rpm
+/mnt/fedora/e/elfutils-0.157-1.fc20.src.rpm
+/mnt/fedora/e/enca-1.14-2.fc20.src.rpm
+/mnt/fedora/e/environment-modules-3.2.10-6.fc20.src.rpm
+/mnt/fedora/e/exempi-2.2.1-3.fc20.src.rpm
+/mnt/fedora/e/exiv2-0.23-5.fc20.src.rpm
+/mnt/fedora/e/expat-2.1.0-7.fc20.src.rpm
+/mnt/fedora/f/fakeroot-1.18.4-2.fc20.src.rpm
+/mnt/fedora/f/farstream02-0.2.3-3.fc20.src.rpm
+/mnt/fedora/f/fftw-3.3.3-7.fc20.src.rpm
+/mnt/fedora/f/Field3D-1.3.2-12.fc20.src.rpm
+/mnt/fedora/f/filezilla-3.7.3-1.fc20.src.rpm
+/mnt/fedora/f/findutils-4.5.11-4.fc20.src.rpm
+/mnt/fedora/f/flac-1.3.0-3.fc20.src.rpm
+/mnt/fedora/f/flex-2.5.37-4.fc20.src.rpm
+/mnt/fedora/f/fltk-1.3.2-1.fc20.src.rpm
+/mnt/fedora/f/fontconfig-2.11.0-1.fc20.src.rpm
+/mnt/fedora/f/fros-1.0-4.fc20.src.rpm
+/mnt/fedora/g/gawk-4.1.0-2.fc20.src.rpm
+/mnt/fedora/g/gc-7.2d-3.fc20.src.rpm
+/mnt/fedora/g/gcc-4.8.2-1.fc20.src.rpm
+/mnt/fedora/g/gd-2.1.0-3.fc20.src.rpm
+/mnt/fedora/g/gdb-7.6.50.20130731-16.fc20.src.rpm
+/mnt/fedora/g/gdbm-1.10-7.fc20.src.rpm
+/mnt/fedora/g/gedit-3.10.2-1.fc20.src.rpm
+/mnt/fedora/g/gegl-0.2.0-12.fc20.src.rpm
+/mnt/fedora/g/gettext-0.18.3.1-1.fc20.src.rpm
+/mnt/fedora/g/gfs2-utils-3.1.6-3.fc20.src.rpm
+/mnt/fedora/g/ghc-7.6.3-18.2.fc20.src.rpm
+/mnt/fedora/g/gimp-2.8.8-3.fc20.src.rpm
+/mnt/fedora/g/gjs-1.38.1-1.fc20.src.rpm
+/mnt/fedora/g/glade-3.16.0-1.fc20.src.rpm
+/mnt/fedora/g/glib2-2.38.2-2.fc20.src.rpm
+/mnt/fedora/g/gmp-5.1.2-2.fc20.src.rpm
+/mnt/fedora/g/gnome-abrt-0.3.3-2.fc20.src.rpm
+/mnt/fedora/g/gnome-mahjongg-3.10.2-1.fc20.src.rpm
+/mnt/fedora/g/gnome-session-3.10.1-1.fc20.src.rpm
+/mnt/fedora/g/gnome-software-3.10.4-1.fc20.src.rpm
+/mnt/fedora/g/gnome-system-monitor-3.10.2-1.fc20.src.rpm
+/mnt/fedora/g/gnome-terminal-3.10.2-1.fc20.src.rpm
+/mnt/fedora/g/gnome-weather-3.10.1-1.fc20.src.rpm
+/mnt/fedora/g/gnupg-1.4.15-1.fc20.src.rpm
+/mnt/fedora/g/gnupg2-2.0.22-1.fc20.src.rpm
+/mnt/fedora/g/gnutls-3.1.16-1.fc20.src.rpm
+/mnt/fedora/g/gperftools-2.1-2.fc20.src.rpm
+/mnt/fedora/g/gpgme-1.3.2-4.fc20.src.rpm
+/mnt/fedora/g/granatier-4.11.3-1.fc20.src.rpm
+/mnt/fedora/g/graphite2-1.2.2-4.fc20.src.rpm
+/mnt/fedora/g/grep-2.15-1.fc20.src.rpm
+/mnt/fedora/g/grubby-8.28-1.fc20.src.rpm
+/mnt/fedora/g/gsl-1.15-9.fc20.src.rpm
+/mnt/fedora/g/gsm-1.0.13-10.fc20.src.rpm
+/mnt/fedora/g/gtk3-3.10.4-1.fc20.src.rpm
+/mnt/fedora/g/gtkmm30-3.10.1-1.fc20.src.rpm
+/mnt/fedora/g/guile-2.0.9-4.fc20.src.rpm
+/mnt/fedora/g/gutenprint-5.2.9-14.fc20.src.rpm
+/mnt/fedora/g/gwebsockets-0.3-1.fc20.src.rpm
+/mnt/fedora/g/gwenview-4.11.3-1.fc20.src.rpm
+/mnt/fedora/h/hawkey-0.4.5-1.fc20.src.rpm
+/mnt/fedora/h/hdf5-1.8.11-6.fc20.src.rpm
+/mnt/fedora/h/hmaccalc-0.9.13-1.fc20.src.rpm
+/mnt/fedora/h/hspell-1.2-6.fc20.src.rpm
+/mnt/fedora/h/httpd-2.4.6-6.fc20.src.rpm
+/mnt/fedora/h/hunspell-1.3.2-14.fc20.src.rpm
+/mnt/fedora/h/hunspell-ko-0.5.5-5.fc20.src.rpm
+/mnt/fedora/h/hwloc-1.7-2.fc20.src.rpm
+/mnt/fedora/h/hyphen-2.8.6-4.fc20.src.rpm
+/mnt/fedora/i/ibus-libpinyin-1.6.92-2.fc20.src.rpm
+/mnt/fedora/i/ibus-typing-booster-1.2.5-1.fc20.src.rpm
+/mnt/fedora/i/icedtea-web-1.4.1-0.fc20.src.rpm
+/mnt/fedora/i/icu-50.1.2-10.fc20.src.rpm
+/mnt/fedora/i/ilmbase-1.0.3-7.fc20.src.rpm
+/mnt/fedora/i/imsettings-1.6.6-1.fc20.src.rpm
+/mnt/fedora/i/indent-2.2.11-12.fc20.src.rpm
+/mnt/fedora/i/initial-setup-0.3.10.1-1.fc20.src.rpm
+/mnt/fedora/i/inkscape-0.48.4-10.fc20.src.rpm
+/mnt/fedora/i/ipython-0.13.2-2.fc20.src.rpm
+/mnt/fedora/i/iris-1.0.0-0.15.20110904svn812.fc20.src.rpm
+/mnt/fedora/j/jansson-2.4-3.fc20.src.rpm
+/mnt/fedora/j/jasper-1.900.1-25.fc20.src.rpm
+/mnt/fedora/j/javapackages-tools-3.4.1-1.fc20.src.rpm
+/mnt/fedora/j/jbigkit-2.0-9.fc20.src.rpm
+/mnt/fedora/j/jemalloc-3.4.0-2.fc20.src.rpm
+/mnt/fedora/j/jovie-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/k3b-2.0.2-20.20130927git.fc20.src.rpm
+/mnt/fedora/k/kajongg-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kalgebra-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kalzium-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kamoso-2.0.2-14.fc20.src.rpm
+/mnt/fedora/k/kanagram-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kapman-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kate-4.11.3-2.fc20.src.rpm
+/mnt/fedora/k/katomic-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kblackbox-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kblocks-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kbounce-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kbreakout-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kbruch-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kcalc-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kcharselect-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kcolorchooser-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kdeaccessibility-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kde-baseapps-4.11.3-2.fc20.src.rpm
+/mnt/fedora/k/kdelibs-4.11.3-9.fc20.src.rpm
+/mnt/fedora/k/kdepim-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kdepim-runtime-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kde-runtime-4.11.3-2.fc20.src.rpm
+/mnt/fedora/k/kdevelop-4.5.2-1.fc20.src.rpm
+/mnt/fedora/k/kde-workspace-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kdiamond-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kfourinline-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kgeography-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kget-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kgoldrunner-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kgpg-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/khangman-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kig-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kigo-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/killbots-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kiriki-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kiten-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kjumpingcube-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/klettres-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/klickety-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/klines-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kmag-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kmahjongg-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kmines-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kmix-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kmousetool-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kmouth-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kmplot-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/knavalbattle-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/knetwalk-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kolf-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kollision-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kolourpaint-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/konquest-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/konsole-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/konversation-1.5-0.6.20130929.fc20.src.rpm
+/mnt/fedora/k/kpat-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/krb5-1.11.3-33.fc20.src.rpm
+/mnt/fedora/k/kreversi-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kruler-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/krusader-2.4.0-0.10.beta3.fc20.src.rpm
+/mnt/fedora/k/kscd-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kshisen-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/ksirk-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/ksnakeduel-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/ksnapshot-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kspaceduel-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/ksquares-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kstars-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/ksudoku-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/ktorrent-4.3.1-4.fc20.src.rpm
+/mnt/fedora/k/ktouch-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/ktuberling-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kturtle-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kubrick-4.11.3-1.fc20.src.rpm
+/mnt/fedora/k/kwordquiz-4.11.3-1.fc20.src.rpm
+/mnt/fedora/l/langtable-0.0.23-1.fc20.src.rpm
+/mnt/fedora/l/leveldb-1.12.0-5.fc20.src.rpm
+/mnt/fedora/l/libarchive-3.1.2-7.fc20.src.rpm
+/mnt/fedora/l/libassuan-2.1.0-2.fc20.src.rpm
+/mnt/fedora/l/libbsd-0.6.0-2.fc20.src.rpm
+/mnt/fedora/l/libcap-ng-0.7.3-6.fc20.src.rpm
+/mnt/fedora/l/libcdio-0.90-3.fc20.src.rpm
+/mnt/fedora/l/libcomps-0.1.4-4.fc20.src.rpm
+/mnt/fedora/l/libconfig-1.4.9-5.fc20.src.rpm
+/mnt/fedora/l/libcroco-0.6.8-3.fc20.src.rpm
+/mnt/fedora/l/libdmtx-0.7.2-11.fc20.src.rpm
+/mnt/fedora/l/libeina-1.7.8-1.fc20.src.rpm
+/mnt/fedora/l/libEMF-1.0.7-3.fc20.src.rpm
+/mnt/fedora/l/libev-4.15-1.fc20.src.rpm
+/mnt/fedora/l/libevent-2.0.21-3.fc20.src.rpm
+/mnt/fedora/l/libexif-0.6.21-6.fc20.src.rpm
+/mnt/fedora/l/libexttextcat-3.4.3-2.fc20.src.rpm
+/mnt/fedora/l/libfm-1.1.2.2-3.fc20.src.rpm
+/mnt/fedora/l/libgcrypt-1.5.3-2.fc20.src.rpm
+/mnt/fedora/l/libgdata-0.14.0-1.fc20.src.rpm
+/mnt/fedora/l/libgdither-0.6-7.fc20.src.rpm
+/mnt/fedora/l/libgee-0.12.0-1.fc20.src.rpm
+/mnt/fedora/l/libgee06-0.6.8-2.fc20.src.rpm
+/mnt/fedora/l/libgovirt-0.1.0-2.fc20.src.rpm
+/mnt/fedora/l/libgpg-error-1.12-1.fc20.src.rpm
+/mnt/fedora/l/libidn-1.28-2.fc20.src.rpm
+/mnt/fedora/l/libjpeg-turbo-1.3.0-1.fc20.src.rpm
+/mnt/fedora/l/libkdcraw-4.11.3-1.fc20.src.rpm
+/mnt/fedora/l/libkexiv2-4.11.3-1.fc20.src.rpm
+/mnt/fedora/l/libkipi-4.11.3-1.fc20.src.rpm
+/mnt/fedora/l/libkkc-0.3.1-2.fc20.src.rpm
+/mnt/fedora/l/libkolab-0.4.2-3.fc20.src.rpm
+/mnt/fedora/l/libkolabxml-0.8.4-3.fc20.src.rpm
+/mnt/fedora/l/libksane-4.11.3-1.fc20.src.rpm
+/mnt/fedora/l/liblastfm-1.0.7-2.fc20.src.rpm
+/mnt/fedora/l/liblouis-2.5.3-2.fc20.src.rpm
+/mnt/fedora/l/libmbim-1.5.0-1.20130815git.fc20.src.rpm
+/mnt/fedora/l/libmetalink-0.1.2-4.fc20.src.rpm
+/mnt/fedora/l/libmodman-2.0.1-7.fc20.src.rpm
+/mnt/fedora/l/libmodplug-0.8.8.4-5.fc20.src.rpm
+/mnt/fedora/l/libmpc-1.0.1-2.fc20.src.rpm
+/mnt/fedora/l/libmusicbrainz3-3.0.3-7.fc20.src.rpm
+/mnt/fedora/l/libmusicbrainz5-5.0.1-8.fc20.src.rpm
+/mnt/fedora/l/libmygpo-qt-1.0.7-2.fc20.src.rpm
+/mnt/fedora/l/libnice-0.1.4-2.fc20.src.rpm
+/mnt/fedora/l/libopenraw-0.0.9-6.fc20.src.rpm
+/mnt/fedora/l/liborcus-0.5.1-5.fc20.src.rpm
+/mnt/fedora/l/libosinfo-0.2.7-2.fc20.src.rpm
+/mnt/fedora/l/libpinyin-0.9.94-1.fc20.src.rpm
+/mnt/fedora/l/libpipeline-1.2.4-2.fc20.src.rpm
+/mnt/fedora/l/libpng-1.6.3-3.fc20.src.rpm
+/mnt/fedora/l/libpqxx-3.2-0.5.fc20.src.rpm
+/mnt/fedora/l/libproxy-0.4.11-7.fc20.src.rpm
+/mnt/fedora/l/libpwquality-1.2.3-1.fc20.src.rpm
+/mnt/fedora/l/libqb-0.16.0-1.fc20.src.rpm
+/mnt/fedora/l/libQtGTL-0.9.3-2.fc20.src.rpm
+/mnt/fedora/l/libquvi-0.9.2-1.fc20.src.rpm
+/mnt/fedora/l/libqzeitgeist-0.8.0-10.fc20.src.rpm
+/mnt/fedora/l/libreoffice-4.1.3.2-9.fc20.src.rpm
+/mnt/fedora/l/librepo-1.4.0-1.fc20.src.rpm
+/mnt/fedora/l/libreport-2.1.9-1.fc20.src.rpm
+/mnt/fedora/l/libsamplerate-0.1.8-5.fc20.src.rpm
+/mnt/fedora/l/libserf-1.2.1-4.fc20.src.rpm
+/mnt/fedora/l/libsilc-1.1.10-10.fc20.src.rpm
+/mnt/fedora/l/libsndfile-1.0.25-8.fc20.src.rpm
+/mnt/fedora/l/libsolv-0.4.0-1.gitd49d319.fc20.src.rpm
+/mnt/fedora/l/libssh2-1.4.3-8.fc20.src.rpm
+/mnt/fedora/l/libtasn1-3.3-2.fc20.src.rpm
+/mnt/fedora/l/libtiff-4.0.3-12.fc20.src.rpm
+/mnt/fedora/l/libtomcrypt-1.17-21.fc20.src.rpm
+/mnt/fedora/l/libtool-2.4.2-21.fc20.src.rpm
+/mnt/fedora/l/libunwind-1.1-3.fc20.src.rpm
+/mnt/fedora/l/libuser-0.60-3.fc20.src.rpm
+/mnt/fedora/l/libvirt-1.1.3.1-2.fc20.src.rpm
+/mnt/fedora/l/libvncserver-0.9.9-9.fc20.src.rpm
+/mnt/fedora/l/libvorbis-1.3.3-6.fc20.src.rpm
+/mnt/fedora/l/libwpd-0.9.9-1.fc20.src.rpm
+/mnt/fedora/l/libxdg-basedir-1.2.0-5.fc20.src.rpm
+/mnt/fedora/l/libxml2-2.9.1-2.fc20.src.rpm
+/mnt/fedora/l/libxslt-1.1.28-5.fc20.src.rpm
+/mnt/fedora/l/libyaml-0.1.4-5.fc20.src.rpm
+/mnt/fedora/l/libyubikey-1.10-2.fc20.src.rpm
+/mnt/fedora/l/lightdm-1.8.5-2.fc20.src.rpm
+/mnt/fedora/l/llvm-3.3-0.10.rc3.fc20.src.rpm
+/mnt/fedora/l/logrotate-3.8.7-1.fc20.src.rpm
+/mnt/fedora/l/loudmouth-1.4.3-13.fc20.src.rpm
+/mnt/fedora/l/lskat-4.11.3-1.fc20.src.rpm
+/mnt/fedora/l/ltrace-0.7.2-7.fc20.src.rpm
+/mnt/fedora/l/lua-expat-1.2.0-6.fc20.src.rpm
+/mnt/fedora/l/lua-json-1.3.2-2.fc20.src.rpm
+/mnt/fedora/l/lua-lgi-0.7.1-3.fc20.src.rpm
+/mnt/fedora/l/lua-lpeg-0.12-2.fc20.src.rpm
+/mnt/fedora/l/lyx-2.0.6-3.fc20.src.rpm
+/mnt/fedora/l/lzo-2.06-5.fc20.src.rpm
+/mnt/fedora/m/m4-1.4.16-10.fc20.src.rpm
+/mnt/fedora/m/mailcap-2.1.42-1.fc20.src.rpm
+/mnt/fedora/m/make-3.82-19.fc20.src.rpm
+/mnt/fedora/m/man-db-2.6.5-2.fc20.src.rpm
+/mnt/fedora/m/marble-4.11.3-1.fc20.src.rpm
+/mnt/fedora/m/mariadb-5.5.33a-2.fc20.src.rpm
+/mnt/fedora/m/mate-character-map-1.6.1-0.1.git2464a6c.fc20.src.rpm
+/mnt/fedora/m/mate-document-viewer-1.6.1-7.fc20.src.rpm
+/mnt/fedora/m/mate-panel-1.6.1-4.fc20.src.rpm
+/mnt/fedora/m/mercurial-2.8-1.fc20.src.rpm
+/mnt/fedora/m/mesa-9.2.3-1.20131114.fc20.src.rpm
+/mnt/fedora/m/mesa-demos-8.1.0-4.fc20.src.rpm
+/mnt/fedora/m/mhash-0.9.9.9-8.fc20.src.rpm
+/mnt/fedora/m/mobile-broadband-provider-info-1.20120614-4.fc20.src.rpm
+/mnt/fedora/m/ModemManager-1.1.0-2.git20130913.fc20.src.rpm
+/mnt/fedora/m/mozjs17-17.0.0-8.fc20.src.rpm
+/mnt/fedora/m/mpfr-3.1.2-4.fc20.src.rpm
+/mnt/fedora/m/mscore-1.3-2.fc20.src.rpm
+/mnt/fedora/m/mythes-1.2.3-6.fc20.src.rpm
+/mnt/fedora/n/nepomuk-core-4.11.3-1.fc20.src.rpm
+/mnt/fedora/n/netpbm-10.61.02-7.fc20.src.rpm
+/mnt/fedora/n/net-snmp-5.7.2-15.fc20.src.rpm
+/mnt/fedora/n/nettle-2.6-3.fc20.src.rpm
+/mnt/fedora/n/NetworkManager-openvpn-0.9.8.2-3.fc20.src.rpm
+/mnt/fedora/n/NetworkManager-pptp-0.9.8.2-3.fc20.src.rpm
+/mnt/fedora/n/NetworkManager-vpnc-0.9.8.2-2.fc20.src.rpm
+/mnt/fedora/n/nkf-2.1.2-9.fc20.src.rpm
+/mnt/fedora/n/nspr-4.10.1-1.fc20.src.rpm
+/mnt/fedora/n/nss-3.15.2-3.fc20.src.rpm
+/mnt/fedora/n/nss-softokn-3.15.2-2.fc20.src.rpm
+/mnt/fedora/n/numpy-1.8.0-2.fc20.src.rpm
+/mnt/fedora/o/okteta-4.11.3-1.fc20.src.rpm
+/mnt/fedora/o/okular-4.11.3-1.fc20.src.rpm
+/mnt/fedora/o/openbabel-2.3.2-2.fc20.src.rpm
+/mnt/fedora/o/opencc-0.4.3-2.fc20.src.rpm
+/mnt/fedora/o/OpenColorIO-1.0.8-6.fc20.src.rpm
+/mnt/fedora/o/opencv-2.4.6.1-1.fc20.src.rpm
+/mnt/fedora/o/OpenEXR-1.7.1-6.fc20.src.rpm
+/mnt/fedora/o/OpenGTL-0.9.18-8.fc20.src.rpm
+/mnt/fedora/o/OpenImageIO-1.2.1-1.fc20.src.rpm
+/mnt/fedora/o/openjpeg-1.5.1-6.fc20.src.rpm
+/mnt/fedora/o/openmpi-1.7.2-7.fc20.src.rpm
+/mnt/fedora/o/opensp-1.5.2-18.fc20.src.rpm
+/mnt/fedora/o/openssh-6.3p1-5.fc20.src.rpm
+/mnt/fedora/o/openssl-1.0.1e-30.fc20.src.rpm
+/mnt/fedora/o/open-vm-tools-9.4.0-1.fc20.src.rpm
+/mnt/fedora/o/openvpn-2.3.2-4.fc20.src.rpm
+/mnt/fedora/o/optipng-0.7.4-3.fc20.src.rpm
+/mnt/fedora/o/opus-1.0.3-2.fc20.src.rpm
+/mnt/fedora/o/orc-0.4.18-1.fc20.src.rpm
+/mnt/fedora/p/p11-kit-0.20.1-1.fc20.src.rpm
+/mnt/fedora/p/palapeli-4.11.3-1.fc20.src.rpm
+/mnt/fedora/p/pam-1.1.8-1.fc20.src.rpm
+/mnt/fedora/p/pam_krb5-2.4.8-1.fc20.src.rpm
+/mnt/fedora/p/parley-4.11.3-1.fc20.src.rpm
+/mnt/fedora/p/parted-3.1-13.fc20.src.rpm
+/mnt/fedora/p/patch-2.7.1-7.fc20.src.rpm
+/mnt/fedora/p/patchutils-0.3.3-4.fc20.src.rpm
+/mnt/fedora/p/pcre-8.33-2.fc20.1.src.rpm
+/mnt/fedora/p/perl-5.18.1-288.fc20.src.rpm
+/mnt/fedora/p/perl-Algorithm-Diff-1.1902-19.fc20.src.rpm
+/mnt/fedora/p/perl-AnyEvent-7.05-1.fc20.src.rpm
+/mnt/fedora/p/perl-AnyEvent-AIO-1.1-13.fc20.src.rpm
+/mnt/fedora/p/perl-AnyEvent-BDB-1.1-13.fc20.src.rpm
+/mnt/fedora/p/perl-App-cpanminus-1.6927-2.fc20.src.rpm
+/mnt/fedora/p/perl-Archive-Extract-0.68-291.fc20.src.rpm
+/mnt/fedora/p/perl-Archive-Tar-1.92-4.fc20.src.rpm
+/mnt/fedora/p/perl-Archive-Zip-1.30-13.fc20.src.rpm
+/mnt/fedora/p/perl-autodie-2.20-4.fc20.src.rpm
+/mnt/fedora/p/perl-BDB-1.90-6.fc20.src.rpm
+/mnt/fedora/p/perl-B-Hooks-EndOfScope-0.12-4.fc20.src.rpm
+/mnt/fedora/p/perl-B-Lint-1.17-291.fc20.src.rpm
+/mnt/fedora/p/perl-boolean-0.30-3.fc20.src.rpm
+/mnt/fedora/p/perl-BSD-Resource-1.29.07-3.fc20.src.rpm
+/mnt/fedora/p/perl-Business-ISBN-2.06-4.fc20.src.rpm
+/mnt/fedora/p/perl-Business-ISBN-Data-20120719.001-4.fc20.src.rpm
+/mnt/fedora/p/perl-Carp-1.26-245.fc20.src.rpm
+/mnt/fedora/p/perl-CGI-3.63-291.fc20.src.rpm
+/mnt/fedora/p/perl-Class-Load-0.20-6.fc20.src.rpm
+/mnt/fedora/p/perl-Class-Singleton-1.4-16.fc20.src.rpm
+/mnt/fedora/p/perl-common-sense-3.6-6.fc20.src.rpm
+/mnt/fedora/p/perl-Compress-Raw-Bzip2-2.062-2.fc20.src.rpm
+/mnt/fedora/p/perl-Compress-Raw-Zlib-2.062-2.fc20.src.rpm
+/mnt/fedora/p/perl-constant-1.27-292.fc20.src.rpm
+/mnt/fedora/p/perl-Coro-6.32-1.fc20.src.rpm
+/mnt/fedora/p/perl-CPAN-Meta-2.132140-1.fc20.src.rpm
+/mnt/fedora/p/perl-CPAN-Meta-Requirements-2.122-292.fc20.src.rpm
+/mnt/fedora/p/perl-CPAN-Meta-YAML-0.010-1.fc20.src.rpm
+/mnt/fedora/p/perl-CPANPLUS-0.91.40-2.fc20.src.rpm
+/mnt/fedora/p/perl-CPANPLUS-Dist-Build-0.70-292.fc20.src.rpm
+/mnt/fedora/p/perl-Data-Dumper-2.145-292.fc20.src.rpm
+/mnt/fedora/p/perl-Data-OptList-0.108-3.fc20.src.rpm
+/mnt/fedora/p/perl-Date-Manip-6.41-1.fc20.src.rpm
+/mnt/fedora/p/perl-DateTime-1.03-3.fc20.src.rpm
+/mnt/fedora/p/perl-DateTime-Locale-0.45-8.fc20.src.rpm
+/mnt/fedora/p/perl-DateTime-TimeZone-1.63-1.fc20.src.rpm
+/mnt/fedora/p/perl-DBD-MySQL-4.024-1.fc20.src.rpm
+/mnt/fedora/p/perl-DBD-Pg-2.19.3-5.fc20.src.rpm
+/mnt/fedora/p/perl-DBD-SQLite-1.40-2.fc20.src.rpm
+/mnt/fedora/p/perl-DB_File-1.830-1.fc20.src.rpm
+/mnt/fedora/p/perl-DBI-1.630-1.fc20.src.rpm
+/mnt/fedora/p/perl-DBIx-Simple-1.35-9.fc20.src.rpm
+/mnt/fedora/p/perl-Devel-GlobalDestruction-0.12-1.fc20.src.rpm
+/mnt/fedora/p/perl-Devel-PartialDump-0.15-11.fc20.src.rpm
+/mnt/fedora/p/perl-Digest-1.17-291.fc20.src.rpm
+/mnt/fedora/p/perl-Digest-MD5-2.53-3.fc20.src.rpm
+/mnt/fedora/p/perl-Digest-SHA1-2.13-10.fc20.src.rpm
+/mnt/fedora/p/perl-Digest-SHA-5.85-4.fc20.src.rpm
+/mnt/fedora/p/perl-Dist-CheckConflicts-0.09-3.fc20.src.rpm
+/mnt/fedora/p/perl-Encode-2.54-1.fc20.src.rpm
+/mnt/fedora/p/perl-Encode-Locale-1.03-7.fc20.src.rpm
+/mnt/fedora/p/perl-Env-1.04-291.fc20.src.rpm
+/mnt/fedora/p/perl-Error-0.17021-1.fc20.src.rpm
+/mnt/fedora/p/perl-EV-4.11-4.fc20.src.rpm
+/mnt/fedora/p/perl-Eval-Closure-0.08-6.fc20.src.rpm
+/mnt/fedora/p/perl-Event-1.21-4.fc20.src.rpm
+/mnt/fedora/p/perl-Exporter-5.68-293.fc20.src.rpm
+/mnt/fedora/p/perl-ExtUtils-MakeMaker-6.72-2.fc20.src.rpm
+/mnt/fedora/p/perl-ExtUtils-Manifest-1.63-1.fc20.src.rpm
+/mnt/fedora/p/perl-ExtUtils-ParseXS-3.18-291.fc20.src.rpm
+/mnt/fedora/p/perl-FCGI-0.74-10.fc20.src.rpm
+/mnt/fedora/p/perl-File-BaseDir-0.03-16.fc20.src.rpm
+/mnt/fedora/p/perl-File-CheckTree-4.42-291.fc20.src.rpm
+/mnt/fedora/p/perl-File-DesktopEntry-0.05-3.fc20.src.rpm
+/mnt/fedora/p/perl-File-Fetch-0.44-1.fc20.src.rpm
+/mnt/fedora/p/perl-File-Listing-6.04-7.fc20.src.rpm
+/mnt/fedora/p/perl-File-MimeInfo-0.17-2.fc20.src.rpm
+/mnt/fedora/p/perl-File-Path-2.09-292.fc20.src.rpm
+/mnt/fedora/p/perl-File-Temp-0.23.01-4.fc20.src.rpm
+/mnt/fedora/p/perl-Filter-1.49-5.fc20.src.rpm
+/mnt/fedora/p/perl-Getopt-Long-2.42-1.fc20.src.rpm
+/mnt/fedora/p/perl-Guard-1.022-6.fc20.src.rpm
+/mnt/fedora/p/perl-HTML-Parser-3.71-4.fc20.src.rpm
+/mnt/fedora/p/perl-HTML-Tagset-3.20-18.fc20.src.rpm
+/mnt/fedora/p/perl-HTTP-Cookies-6.01-7.fc20.src.rpm
+/mnt/fedora/p/perl-HTTP-Daemon-6.01-7.fc20.src.rpm
+/mnt/fedora/p/perl-HTTP-Date-6.02-8.fc20.src.rpm
+/mnt/fedora/p/perl-HTTP-Message-6.06-7.fc20.src.rpm
+/mnt/fedora/p/perl-HTTP-Negotiate-6.01-7.fc20.src.rpm
+/mnt/fedora/p/perl-HTTP-Tiny-0.034-3.fc20.src.rpm
+/mnt/fedora/p/perl-Image-ExifTool-9.27-3.fc20.src.rpm
+/mnt/fedora/p/perl-IO-AIO-4.15-6.fc20.src.rpm
+/mnt/fedora/p/perl-IO-Compress-2.062-2.fc20.src.rpm
+/mnt/fedora/p/perl-IO-HTML-1.00-3.fc20.src.rpm
+/mnt/fedora/p/perl-IO-Socket-IP-0.22-2.fc20.src.rpm
+/mnt/fedora/p/perl-IO-Socket-SSL-1.955-1.fc20.src.rpm
+/mnt/fedora/p/perl-IPC-Cmd-0.84-1.fc20.src.rpm
+/mnt/fedora/p/perl-JSON-PP-2.27203-1.fc20.src.rpm
+/mnt/fedora/p/perl-libwww-perl-6.05-3.fc20.src.rpm
+/mnt/fedora/p/perl-Linux-Pid-0.04-20.fc20.src.rpm
+/mnt/fedora/p/perl-List-MoreUtils-0.33-11.fc20.src.rpm
+/mnt/fedora/p/perl-Locale-Codes-3.26-3.fc20.src.rpm
+/mnt/fedora/p/perl-Locale-Maketext-1.23-292.fc20.src.rpm
+/mnt/fedora/p/perl-Log-Message-0.08-4.fc20.src.rpm
+/mnt/fedora/p/perl-Log-Message-Simple-0.10-292.fc20.src.rpm
+/mnt/fedora/p/perl-LWP-MediaTypes-6.02-4.fc20.src.rpm
+/mnt/fedora/p/perl-Module-Build-0.40.07-3.fc20.src.rpm
+/mnt/fedora/p/perl-Module-Implementation-0.07-3.fc20.src.rpm
+/mnt/fedora/p/perl-Module-Load-0.24-291.fc20.src.rpm
+/mnt/fedora/p/perl-Module-Load-Conditional-0.54-291.fc20.src.rpm
+/mnt/fedora/p/perl-Module-Metadata-1.000019-1.fc20.src.rpm
+/mnt/fedora/p/perl-Module-Pluggable-4.80-291.fc20.src.rpm
+/mnt/fedora/p/perl-Module-Runtime-0.013-6.fc20.src.rpm
+/mnt/fedora/p/perl-Module-Signature-0.73-3.fc20.src.rpm
+/mnt/fedora/p/perl-MongoDB-0.702.2-2.fc20.src.rpm
+/mnt/fedora/p/perl-Moose-2.1005-1.fc20.src.rpm
+/mnt/fedora/p/perl-MRO-Compat-0.12-4.fc20.src.rpm
+/mnt/fedora/p/perl-namespace-clean-0.24-4.fc20.src.rpm
+/mnt/fedora/p/perl-Net-Daemon-0.48-7.fc20.src.rpm
+/mnt/fedora/p/perl-Net-HTTP-6.06-4.fc20.src.rpm
+/mnt/fedora/p/perl-Net-LibIDN-0.12-16.fc20.src.rpm
+/mnt/fedora/p/perl-Net-SSLeay-1.55-4.fc20.src.rpm
+/mnt/fedora/p/perl-Object-Accessor-0.48-4.fc20.src.rpm
+/mnt/fedora/p/perl-Package-DeprecationManager-0.13-9.fc20.src.rpm
+/mnt/fedora/p/perl-Package-Generator-1.105-3.fc20.src.rpm
+/mnt/fedora/p/perl-Package-Stash-0.36-1.fc20.src.rpm
+/mnt/fedora/p/perl-Package-Stash-XS-0.28-3.fc20.src.rpm
+/mnt/fedora/p/perl-Params-Check-0.38-3.fc20.src.rpm
+/mnt/fedora/p/perl-Params-Util-1.07-7.fc20.src.rpm
+/mnt/fedora/p/perl-Params-Validate-1.08-6.fc20.src.rpm
+/mnt/fedora/p/perl-PAR-Dist-0.49-4.fc20.src.rpm
+/mnt/fedora/p/perl-parent-0.228-1.fc20.src.rpm
+/mnt/fedora/p/perl-Parse-CPAN-Meta-1.4404-291.fc20.src.rpm
+/mnt/fedora/p/perl-Parse-Yapp-1.05-53.fc20.src.rpm
+/mnt/fedora/p/perl-PathTools-3.40-291.fc20.src.rpm
+/mnt/fedora/p/perl-Perl-OSType-1.006-1.fc20.src.rpm
+/mnt/fedora/p/perl-PlRPC-0.2020-15.fc20.src.rpm
+/mnt/fedora/p/perl-Pod-Checker-1.60-291.fc20.src.rpm
+/mnt/fedora/p/perl-Pod-LaTeX-0.61-292.fc20.src.rpm
+/mnt/fedora/p/perl-podlators-2.5.1-291.fc20.src.rpm
+/mnt/fedora/p/perl-Pod-Parser-1.61-3.fc20.src.rpm
+/mnt/fedora/p/perl-Pod-Perldoc-3.20-7.fc20.src.rpm
+/mnt/fedora/p/perl-Pod-Simple-3.28-292.fc20.src.rpm
+/mnt/fedora/p/perl-Pod-Usage-1.63-4.fc20.src.rpm
+/mnt/fedora/p/perl-Readonly-1.03-24.fc20.src.rpm
+/mnt/fedora/p/perl-Readonly-XS-1.05-16.fc20.src.rpm
+/mnt/fedora/p/perl-Reaper-1.00-10.fc20.src.rpm
+/mnt/fedora/p/perl-Scalar-List-Utils-1.31-293.fc20.src.rpm
+/mnt/fedora/p/perl-Socket-2.013-1.fc20.src.rpm
+/mnt/fedora/p/perl-Storable-2.45-2.fc20.src.rpm
+/mnt/fedora/p/perl-Sub-Exporter-0.987-1.fc20.src.rpm
+/mnt/fedora/p/perl-Sub-Exporter-Progressive-0.001011-1.fc20.src.rpm
+/mnt/fedora/p/perl-Sub-Install-0.926-10.fc20.src.rpm
+/mnt/fedora/p/perl-Sub-Name-0.05-11.fc20.src.rpm
+/mnt/fedora/p/perl-Sys-Syslog-0.33-4.fc20.src.rpm
+/mnt/fedora/p/perl-Task-Weaken-1.04-8.fc20.src.rpm
+/mnt/fedora/p/perl-TermReadKey-2.30-20.fc20.src.rpm
+/mnt/fedora/p/perl-Term-UI-0.38-1.fc20.src.rpm
+/mnt/fedora/p/perl-Test-Harness-3.28-3.fc20.src.rpm
+/mnt/fedora/p/perl-Test-Simple-1.001002-1.fc20.src.rpm
+/mnt/fedora/p/perl-Text-Diff-1.41-7.fc20.src.rpm
+/mnt/fedora/p/perl-Text-ParseWords-3.29-3.fc20.src.rpm
+/mnt/fedora/p/perl-Text-Soundex-3.04-291.fc20.src.rpm
+/mnt/fedora/p/perl-Text-Unidecode-0.04-21.fc20.src.rpm
+/mnt/fedora/p/perl-Thread-Queue-3.02-291.fc20.src.rpm
+/mnt/fedora/p/perl-threads-1.89-1.fc20.src.rpm
+/mnt/fedora/p/perl-threads-shared-1.43-291.fc20.src.rpm
+/mnt/fedora/p/perltidy-20121207-4.fc20.src.rpm
+/mnt/fedora/p/perl-Tie-IxHash-1.22-14.fc20.src.rpm
+/mnt/fedora/p/perl-TimeDate-2.30-3.fc20.src.rpm
+/mnt/fedora/p/perl-Time-HiRes-1.9726-1.fc20.src.rpm
+/mnt/fedora/p/perl-Time-Local-1.2300-291.fc20.src.rpm
+/mnt/fedora/p/perl-Tk-804.031-4.fc20.src.rpm
+/mnt/fedora/p/perl-Tk-GraphViz-1.01-10.fc20.src.rpm
+/mnt/fedora/p/perl-Try-Tiny-0.18-1.fc20.src.rpm
+/mnt/fedora/p/perl-URI-1.60-11.fc20.src.rpm
+/mnt/fedora/p/perl-Variable-Magic-0.52-4.fc20.src.rpm
+/mnt/fedora/p/perl-version-0.99.04-2.fc20.src.rpm
+/mnt/fedora/p/perl-WWW-RobotRules-6.02-8.fc20.src.rpm
+/mnt/fedora/p/perl-XML-DOM-1.44-20.fc20.src.rpm
+/mnt/fedora/p/perl-XML-Parser-2.41-11.fc20.src.rpm
+/mnt/fedora/p/perl-XML-RegExp-0.04-4.fc20.src.rpm
+/mnt/fedora/p/perl-XML-XQL-0.68-22.fc20.src.rpm
+/mnt/fedora/p/perl-YAML-0.84-7.fc20.src.rpm
+/mnt/fedora/p/perl-YAML-Tiny-1.56-1.fc20.src.rpm
+/mnt/fedora/p/phonon-4.7.0-8.fc20.src.rpm
+/mnt/fedora/p/php-5.5.6-1.fc20.src.rpm
+/mnt/fedora/p/php-pear-1.9.4-23.fc20.src.rpm
+/mnt/fedora/p/php-pecl-jsonc-1.3.2-2.fc20.src.rpm
+/mnt/fedora/p/php-pecl-mongo-1.4.4-1.fc20.src.rpm
+/mnt/fedora/p/picmi-4.11.3-1.fc20.src.rpm
+/mnt/fedora/p/pigz-2.2.5-3.fc20.src.rpm
+/mnt/fedora/p/polkit-pkla-compat-0.1-3.fc20.src.rpm
+/mnt/fedora/p/poppler-0.24.3-2.fc20.src.rpm
+/mnt/fedora/p/popt-1.13-15.fc20.src.rpm
+/mnt/fedora/p/procps-ng-3.3.8-14.fc20.src.rpm
+/mnt/fedora/p/protobuf-2.5.0-5.fc20.src.rpm
+/mnt/fedora/p/pth-2.0.7-21.fc20.src.rpm
+/mnt/fedora/p/pulseaudio-4.0-8.gitf81e3.fc20.src.rpm
+/mnt/fedora/p/pycryptopp-0.6.0.1206569328141510525648634803928199668821045408958-4.fc20.src.rpm
+/mnt/fedora/p/pygame-1.9.1-14.fc20.src.rpm
+/mnt/fedora/p/pygobject3-3.10.2-1.fc20.src.rpm
+/mnt/fedora/p/pygpgme-0.3-8.fc20.src.rpm
+/mnt/fedora/p/pykickstart-1.99.48-1.fc20.src.rpm
+/mnt/fedora/p/pyliblzma-0.5.3-10.fc20.src.rpm
+/mnt/fedora/p/pylint-1.0.0-3.fc20.src.rpm
+/mnt/fedora/p/PyQt4-4.10.2-2.fc20.src.rpm
+/mnt/fedora/p/python-2.7.5-9.fc20.src.rpm
+/mnt/fedora/p/python3-3.3.2-8.fc20.src.rpm
+/mnt/fedora/p/python-astroid-1.0.0-6.fc20.src.rpm
+/mnt/fedora/p/python-beaker-1.5.4-8.fc20.src.rpm
+/mnt/fedora/p/python-BeautifulSoup-3.2.1-6.fc20.src.rpm
+/mnt/fedora/p/python-bugzilla-0.9.0-2.fc20.src.rpm
+/mnt/fedora/p/python-bunch-1.0.1-5.fc20.src.rpm
+/mnt/fedora/p/python-cloudfiles-1.7.10-4.fc20.src.rpm
+/mnt/fedora/p/python-crypto-2.6.1-1.fc20.src.rpm
+/mnt/fedora/p/python-cssselect-0.8-1.fc20.src.rpm
+/mnt/fedora/p/python-decorator-3.4.0-3.fc20.src.rpm
+/mnt/fedora/p/python-decoratortools-1.8-7.fc20.src.rpm
+/mnt/fedora/p/python-di-0.3-2.fc20.src.rpm
+/mnt/fedora/p/python-django14-1.4.8-1.fc20.src.rpm
+/mnt/fedora/p/python-django-1.5.5-2.fc20.src.rpm
+/mnt/fedora/p/python-enchant-1.6.5-12.fc20.src.rpm
+/mnt/fedora/p/python-gitdb-0.5.4-6.fc20.src.rpm
+/mnt/fedora/p/python-IPy-0.75-6.fc20.src.rpm
+/mnt/fedora/p/python-kitchen-1.1.1-5.fc20.src.rpm
+/mnt/fedora/p/python-logilab-common-0.60.0-2.fc20.src.rpm
+/mnt/fedora/p/python-mako-0.7.3-2.fc20.src.rpm
+/mnt/fedora/p/python-markupsafe-0.18-1.fc20.src.rpm
+/mnt/fedora/p/python-meh-0.27-1.fc20.src.rpm
+/mnt/fedora/p/python-nose-1.3.0-1.fc20.src.rpm
+/mnt/fedora/p/python-paramiko-1.10.1-2.fc20.src.rpm
+/mnt/fedora/p/python-paste-1.7.5.1-9.20111221hg1498.fc20.src.rpm
+/mnt/fedora/p/python-pexpect-3.0-1.fc20.src.rpm
+/mnt/fedora/p/python-pillow-2.2.1-2.fc20.src.rpm
+/mnt/fedora/p/python-pycurl-7.19.0-17.20120408git9b8f4e38.fc20.src.rpm
+/mnt/fedora/p/python-requests-1.2.3-5.fc20.src.rpm
+/mnt/fedora/p/python-setuptools-1.3.1-1.fc20.src.rpm
+/mnt/fedora/p/python-simplegeneric-0.8-7.fc20.src.rpm
+/mnt/fedora/p/python-simplejson-3.2.0-2.fc20.src.rpm
+/mnt/fedora/p/python-six-1.4.1-1.fc20.src.rpm
+/mnt/fedora/p/python-smmap-0.8.1-7.fc20.src.rpm
+/mnt/fedora/p/python-tempita-0.5.1-6.fc20.src.rpm
+/mnt/fedora/p/python-twisted-core-12.2.0-3.fc20.src.rpm
+/mnt/fedora/p/python-urllib3-1.7-4.fc20.src.rpm
+/mnt/fedora/p/python-zmq-13.0.2-1.fc20.src.rpm
+/mnt/fedora/p/python-zope-event-4.0.2-2.fc20.src.rpm
+/mnt/fedora/p/python-zope-interface-4.0.5-2.fc20.src.rpm
+/mnt/fedora/p/pyxdg-0.25-2.fc20.src.rpm
+/mnt/fedora/q/qemu-1.6.1-2.fc20.src.rpm
+/mnt/fedora/q/qimageblitz-0.0.6-6.fc20.src.rpm
+/mnt/fedora/q/qjson-0.8.1-3.fc20.src.rpm
+/mnt/fedora/q/qoauth-1.0.1-6.fc20.src.rpm
+/mnt/fedora/q/qpdf-5.0.1-1.fc20.src.rpm
+/mnt/fedora/q/qrencode-3.4.2-1.fc20.src.rpm
+/mnt/fedora/r/raptor2-2.0.9-2.fc20.src.rpm
+/mnt/fedora/r/rasqal-0.9.30-2.fc20.src.rpm
+/mnt/fedora/r/rcs-5.9.0-2.fc20.src.rpm
+/mnt/fedora/r/realmd-0.14.6-1.fc20.src.rpm
+/mnt/fedora/r/recode-3.6-37.fc20.src.rpm
+/mnt/fedora/r/redland-1.0.16-4.fc20.src.rpm
+/mnt/fedora/r/regexp-1.5-13.fc20.src.rpm
+/mnt/fedora/r/rocs-4.11.3-1.fc20.src.rpm
+/mnt/fedora/r/rpm-4.11.1-7.fc20.src.rpm
+/mnt/fedora/r/rpmlint-1.5-5.fc20.src.rpm
+/mnt/fedora/r/ruby-2.0.0.247-15.fc20.src.rpm
+/mnt/fedora/r/rubygem-abrt-0.0.6-1.fc20.src.rpm
+/mnt/fedora/r/rubygem-actionmailer-4.0.0-1.fc20.src.rpm
+/mnt/fedora/r/rubygem-actionpack-4.0.0-1.fc20.src.rpm
+/mnt/fedora/r/rubygem-activemodel-4.0.0-1.fc20.src.rpm
+/mnt/fedora/r/rubygem-activerecord-4.0.0-1.fc20.src.rpm
+/mnt/fedora/r/rubygem-activerecord-deprecated_finders-1.0.3-3.fc20.src.rpm
+/mnt/fedora/r/rubygem-activeresource-4.0.0-1.fc20.src.rpm
+/mnt/fedora/r/rubygem-activesupport-4.0.0-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-arel-4.0.0-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-atomic-1.1.9-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-bcrypt-ruby-3.0.1-8.fc20.src.rpm
+/mnt/fedora/r/rubygem-bson-1.6.4-4.fc20.src.rpm
+/mnt/fedora/r/rubygem-builder-3.1.4-4.fc20.src.rpm
+/mnt/fedora/r/rubygem-bundler-1.3.5-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-coffee-rails-4.0.0-1.fc20.src.rpm
+/mnt/fedora/r/rubygem-coffee-script-2.2.0-4.fc20.src.rpm
+/mnt/fedora/r/rubygem-daemon_controller-1.1.5-1.fc20.src.rpm
+/mnt/fedora/r/rubygem-dalli-2.6.4-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-diff-lcs-1.1.3-3.2.fc20.src.rpm
+/mnt/fedora/r/rubygem-erubis-2.7.0-4.fc20.src.rpm
+/mnt/fedora/r/rubygem-execjs-1.4.0-6.fc20.src.rpm
+/mnt/fedora/r/rubygem-hike-1.2.1-5.fc20.src.rpm
+/mnt/fedora/r/rubygem-i18n-0.6.4-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-journey-1.0.4-5.fc20.src.rpm
+/mnt/fedora/r/rubygem-jquery-rails-2.0.2-4.fc20.src.rpm
+/mnt/fedora/r/rubygem-json-1.7.7-101.fc20.src.rpm
+/mnt/fedora/r/rubygem-listen-0.4.7-4.fc20.src.rpm
+/mnt/fedora/r/rubygem-mail-2.5.4-1.fc20.src.rpm
+/mnt/fedora/r/rubygem-mime-types-1.19-4.fc20.src.rpm
+/mnt/fedora/r/rubygem-minitest-4.7.0-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-mongo-1.6.4-5.fc20.src.rpm
+/mnt/fedora/r/rubygem-multi_json-1.7.7-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-net-http-persistent-2.9-1.fc20.src.rpm
+/mnt/fedora/r/rubygem-passenger-4.0.18-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-polyglot-0.3.3-4.fc20.src.rpm
+/mnt/fedora/r/rubygem-rack-1.5.2-1.fc20.src.rpm
+/mnt/fedora/r/rubygem-rack-cache-1.2-5.fc20.src.rpm
+/mnt/fedora/r/rubygem-rack-protection-1.5.0-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-rack-ssl-1.3.2-8.fc20.src.rpm
+/mnt/fedora/r/rubygem-rack-test-0.6.2-4.fc20.src.rpm
+/mnt/fedora/r/rubygem-rails-observers-0.1.2-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-railties-4.0.0-1.fc20.src.rpm
+/mnt/fedora/r/rubygem-rake-10.0.4-1.fc20.1.src.rpm
+/mnt/fedora/r/rubygem-rdoc-4.0.1-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-ref-1.0.0-5.fc20.src.rpm
+/mnt/fedora/r/rubygem-ruby2ruby-2.0.1-5.fc20.src.rpm
+/mnt/fedora/r/rubygem-ruby_parser-3.1.1-2.fc20.src.rpm
+/mnt/fedora/r/rubygems-2.1.11-113.fc20.src.rpm
+/mnt/fedora/r/rubygem-sass-3.2.6-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-sass-rails-4.0.0-1.fc20.src.rpm
+/mnt/fedora/r/rubygem-sexp_processor-4.1.5-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-sinatra-1.4.3-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-sprockets-2.8.2-4.fc20.src.rpm
+/mnt/fedora/r/rubygem-sprockets-rails-2.0.0-3.fc20.src.rpm
+/mnt/fedora/r/rubygem-sqlite3-1.3.7-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-therubyracer-0.11.0-2.fc19.src.rpm
+/mnt/fedora/r/rubygem-thor-0.18.1-1.fc20.src.rpm
+/mnt/fedora/r/rubygem-thread_safe-0.1.2-3.fc20.src.rpm
+/mnt/fedora/r/rubygem-tilt-1.3.7-3.fc20.src.rpm
+/mnt/fedora/r/rubygem-treetop-1.4.14-1.fc20.src.rpm
+/mnt/fedora/r/rubygem-tzinfo-0.3.37-2.fc20.src.rpm
+/mnt/fedora/r/rubygem-uglifier-1.3.0-4.fc20.src.rpm
+/mnt/fedora/s/samba-4.1.1-1.fc20.src.rpm
+/mnt/fedora/s/satyr-0.11-1.fc20.src.rpm
+/mnt/fedora/s/sed-4.2.2-5.fc20.src.rpm
+/mnt/fedora/s/seed-3.8.1-2.fc20.src.rpm
+/mnt/fedora/s/setup-2.8.71-2.fc20.src.rpm
+/mnt/fedora/s/shared-desktop-ontologies-0.11.0-2.fc20.src.rpm
+/mnt/fedora/s/slang-2.2.4-11.fc20.src.rpm
+/mnt/fedora/s/snappy-1.1.0-2.fc20.src.rpm
+/mnt/fedora/s/soprano-2.9.4-2.fc20.src.rpm
+/mnt/fedora/s/sqlite-3.8.1-2.fc20.src.rpm
+/mnt/fedora/s/squid-3.3.8-3.fc20.src.rpm
+/mnt/fedora/s/sssd-1.11.2-1.fc20.src.rpm
+/mnt/fedora/s/step-4.11.3-1.fc20.src.rpm
+/mnt/fedora/s/strace-4.8-1.fc20.src.rpm
+/mnt/fedora/s/subversion-1.8.3-1.fc20.src.rpm
+/mnt/fedora/s/sugar-read-111-1.fc20.src.rpm
+/mnt/fedora/t/taglib-1.9.1-2.fc20.src.rpm
+/mnt/fedora/t/tar-1.26-29.fc20.src.rpm
+/mnt/fedora/t/tcl-8.5.14-1.fc20.src.rpm
+/mnt/fedora/t/tcpdump-4.5.0-1.20131108gitb07944a.fc20.src.rpm
+/mnt/fedora/t/telepathy-gabble-0.18.1-1.fc20.src.rpm
+/mnt/fedora/t/telepathy-glib-0.22.0-1.fc20.src.rpm
+/mnt/fedora/t/telepathy-haze-0.8.0-1.fc20.src.rpm
+/mnt/fedora/t/telepathy-idle-0.2.0-1.fc20.src.rpm
+/mnt/fedora/t/telepathy-mission-control-5.16.0-2.fc20.src.rpm
+/mnt/fedora/t/thunar-vfs-1.2.0-12.fc20.src.rpm
+/mnt/fedora/t/tk-8.5.14-1.fc20.src.rpm
+/mnt/fedora/u/ustr-1.0.4-15.fc20.src.rpm
+/mnt/fedora/u/util-linux-2.24-2.fc20.src.rpm
+/mnt/fedora/v/valgrind-3.9.0-2.fc20.src.rpm
+/mnt/fedora/v/vigra-1.9.0-11.fc20.src.rpm
+/mnt/fedora/v/virtuoso-opensource-6.1.6-5.fc20.src.rpm
+/mnt/fedora/w/wxGTK-2.8.12-9.fc20.src.rpm
+/mnt/fedora/x/xapian-bindings-1.2.15-1.fc20.src.rpm
+/mnt/fedora/x/xcb-util-0.3.9-3.fc20.src.rpm
+/mnt/fedora/x/xcb-util-image-0.3.9-3.fc20.src.rpm
+/mnt/fedora/x/xcb-util-keysyms-0.3.9-3.fc20.src.rpm
+/mnt/fedora/x/xcb-util-wm-0.3.9-3.fc20.src.rpm
+/mnt/fedora/x/xmlrpc-c-1.32.5-1903.svn2451.fc20.src.rpm
+/mnt/fedora/x/xorg-x11-fonts-7.5-9.fc20.src.rpm
+/mnt/fedora/x/xz-5.1.2-6alpha.fc20.src.rpm
+/mnt/fedora/y/yajl-2.0.4-3.fc20.src.rpm
+/mnt/fedora/y/yelp-3.10.1-1.fc20.src.rpm
+/mnt/fedora/y/ykpers-1.13.0-3.fc20.src.rpm
+/mnt/fedora/y/yum-3.4.3-106.fc20.src.rpm
+/mnt/fedora/z/zeromq3-3.2.4-1.fc20.src.rpm
+/mnt/fedora/z/zlib-1.2.8-3.fc20.src.rpm
