@@ -1,0 +1,18 @@
+#!/bin/sh
+# Test suite check for Package Wrangler
+# Author: Mikolaj Izdebski <mizdebsk@redhat.com>
+# Date: July 2013
+set -e
+
+yes='[32mYES[m'
+no='[31mNO[m'
+
+packaged="$no"
+find | egrep '/src/test/|/it/' && packaged="$yes"
+
+enabled="$packaged"
+cat *.spec | sed 's/#.*//' | egrep 'maven.*test.*skip.*true|%mvn_build.*-f|%mvn_build.*test.*skip' && enabled="$no"
+
+echo "Tests upstream: $packaged"
+echo "Tests packaged: $packaged"
+echo "Tests enabled:  $enabled"
