@@ -49,15 +49,20 @@ if len(sys.argv) < 3:
     sys.exit(1)
 
 
-packages = open(sys.argv[1]).readlines()
+packages = open(sys.argv[1]).read().split("\n")
 bug_stats = {}
-for line in open(sys.argv[2]).readlines():
+for line in open(sys.argv[2]).read().split("\n"):
+    # skip empty lines
+    if not line.strip():
+        continue
     name, bug_count = line.split(",")
+    bug_count = int(bug_count)
     bug_stats[name] = bug_count
 components = bug_stats.keys()
 
 results = { 0 : [] }
 for package in packages:
+    # skip empty lines
     if not package.strip():
         continue
 
