@@ -57,7 +57,7 @@ for line in open(sys.argv[2]).readline():
 components = bug_stats.keys()
 
 
-results = {}
+results = { 0 : [] }
 for package in packages:
     rpm_info = get_rpm_info(package)
     name = rpm_info['name']
@@ -68,6 +68,8 @@ for package in packages:
         if bug_count not in results.keys():
             results[bug_count] = []
         results[bug_count].append("%s-%s" % (name, version))
+    else:
+        results[0].append("%s-%s" % (name, version))
 
 bug_numbers = results.keys()
 bug_numbers.sort(reverse=True)
