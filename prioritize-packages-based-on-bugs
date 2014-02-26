@@ -49,16 +49,18 @@ if len(sys.argv) < 3:
     sys.exit(1)
 
 
-packages = open(sys.argv[1]).read().split("\n")
-bugs_stats = {}
-for line in open(sys.argv[2]).readline():
+packages = open(sys.argv[1]).readlines()
+bug_stats = {}
+for line in open(sys.argv[2]).readlines():
     name, bug_count = line.split(",")
-    bugs_stats[name] = bug_count
+    bug_stats[name] = bug_count
 components = bug_stats.keys()
-
 
 results = { 0 : [] }
 for package in packages:
+    if not package.strip():
+        continue
+
     rpm_info = get_rpm_info(package)
     name = rpm_info['name']
     version = rpm_info['version']
