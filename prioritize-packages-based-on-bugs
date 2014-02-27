@@ -82,6 +82,7 @@ bug_numbers = results.keys()
 bug_numbers.sort(reverse=True)
 
 print """{| class="sortable" border="1"
+! Status
 ! Package
 ! Bugs
 ! class="unsortable" | Comments, repoted bugs, etc"""
@@ -92,6 +93,7 @@ for num in bug_numbers:
 
     for c in components:
         print """|-
+| {{result|none}}
 | %s
 | style="text-align:right;" | %d
 | """ % (c, num)
