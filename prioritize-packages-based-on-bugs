@@ -84,7 +84,8 @@ bug_numbers.sort(reverse=True)
 print """{| border="1"
 |-
 | Package
-| Number of bugs"""
+| Number of bugs
+| Comments, repoted bugs, etc"""
 
 for num in bug_numbers:
     components = results[num]
@@ -93,6 +94,7 @@ for num in bug_numbers:
     for c in components:
         print """|-
 | %s
-| %d""" % (c, num)
+| %d
+| """ % (c, num)
 
 print "|}"
