@@ -74,9 +74,9 @@ for package in packages:
         bug_count = bug_stats[name]
         if bug_count not in results.keys():
             results[bug_count] = []
-        results[bug_count].append("%s-%s" % (name, version))
+        results[bug_count].append((name, version))
     else:
-        results[0].append("%s-%s" % (name, version))
+        results[0].append((name, version))
 
 bug_numbers = results.keys()
 bug_numbers.sort(reverse=True)
@@ -91,11 +91,11 @@ for num in bug_numbers:
     components = results[num]
     components.sort()
 
-    for c in components:
+    for (name, version) in components:
         print """|-
 | {{result|none}}
-| %s
-| style="text-align:right;" | %d
-| """ % (c, num)
+| %s-%s
+| style="text-align:right;" | [https://bugzilla.redhat.com/buglist.cgi?chfieldfrom=2012-01-01&chfieldto=Now&classification=Fedora&component=%s %d]
+| """ % (name, version, name, num)
 
 print "|}"
