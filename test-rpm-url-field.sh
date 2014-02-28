@@ -31,6 +31,6 @@ fi
 
 for f in `find $SEARCH_IN -name "*.rpm"`; do
     URL=`rpm -qp --qf "%{url}\n" $f`
-    RESPONSE=`curl -I "$URL" 2>/dev/null | grep HTTP`
+    RESPONSE=`curl --connect-timeout 3 -I "$URL" 2>/dev/null | grep HTTP || echo "HTTP ERROR"`
     echo "$RESPONSE     $URL    $f"
 done
