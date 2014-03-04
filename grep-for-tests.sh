@@ -39,5 +39,5 @@ for f in `find $SEARCH_IN -name "*.src.rpm"`; do
         echo "^^^^^ $f"
     fi
 
-    rm -rf ~/rpmbuild/BUILD/ # to save space
+    rm -rf ~/rpmbuild/ # clean up
 done
