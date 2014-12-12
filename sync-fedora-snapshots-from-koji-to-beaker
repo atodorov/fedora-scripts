@@ -83,10 +83,10 @@ if __name__ == "__main__":
     config={}
 
     parser = OptionParser(description="Sync Fedora snapshots between Koji and Beaker")
-    parser.add_option("-b", "--beaker", dest="beaker", action="store", default="",
-                      help="URL of Beaker proxy, e.g. http://beaker01.qa.fedoraproject.org:8000/")
-    parser.add_option("-m", "--mash", dest="mash", action="store", default="",
-                      help="URL of Mash, e.g. http://koji.fedoraproject.org/mash/")
+    parser.add_option("-b", "--beaker", dest="beaker", action="store", default="http://beaker01.qa.fedoraproject.org:8000/",
+                      help="URL of Beaker proxy, default http://beaker01.qa.fedoraproject.org:8000/")
+    parser.add_option("-m", "--mash", dest="mash", action="store", default="http://koji.fedoraproject.org/mash/",
+                      help="URL of Mash, default http://koji.fedoraproject.org/mash/")
     (opt, args) = parser.parse_args()
 
     if not opt.beaker:
