@@ -138,12 +138,13 @@ if __name__ == "__main__":
                 timestamp = make_timestamp(treeinfo.get('general', 'timestamp'))
                 distro['tree_build_time'] = treeinfo.get('general', 'timestamp')
 
-                platform = treeinfo.get('general', 'family').replace(' ', '')
+                family = treeinfo.get('general', 'family').replace(' ', '')
+                version = treeinfo.get('general', 'version')
 
-                distro['osmajor'] = treeinfo.get('general', 'version')
+                distro['osmajor'] = "%s%s" % (family, version)
                 distro['osminor'] = 0
 
-                distro['name'] = "%s-%s-%s" % (platform, distro['osmajor'], timestamp)
+                distro['name'] = "%s-%s-%s" % (family, version, timestamp)
                 distro['arch'] = treeinfo.get('general', 'arch')
                 distro['variant'] = make_variant(treeinfo.get('general', 'variant'))
 
