@@ -18,7 +18,6 @@ try:
 except ImportError:
     import configparser
 
-from getpass import getpass
 from optparse import OptionParser
 
 def _get_dirname_from_link(link):
@@ -85,27 +84,20 @@ if __name__ == "__main__":
 
     parser = OptionParser(description="Sync Fedora snapshots between Koji and Beaker")
     parser.add_option("-b", "--beaker", dest="beaker", action="store", default="",
-                      help="URL of Beaker server, e.g. http://beaker.fedoraproject.org/bkr/")
+                      help="URL of Beaker proxy, e.g. http://beaker01.qa.fedoraproject.org:8000/")
     parser.add_option("-m", "--mash", dest="mash", action="store", default="",
                       help="URL of Mash, e.g. http://koji.fedoraproject.org/mash/")
-    parser.add_option("-u", "--user", dest="beaker_user", action="store", default="",
-                      help="Username for Beaker.")
     (opt, args) = parser.parse_args()
 
     if not opt.beaker:
         print "ERROR: Beaker URL is not specified."
         sys.exit(1)
+    opt.beaker = opt.beaker.strip('/')
 
     if not opt.mash:
         print "ERROR: Mash URL is not specified."
         sys.exit(1)
-
-    if not opt.beaker_user:
-        print "ERROR: Beaker username is not specified."
-        sys.exit(1)
-
-
-    config['beaker_password'] = getpass("Beaker password: ")
+    opt.mash = opt.mash.strip('/')
 
     # build a transport which supports cookies.
     # cookies are used for authentication
@@ -114,14 +106,11 @@ if __name__ == "__main__":
     else:
         TransportClass = kobo.xmlrpc.retry_request_decorator(kobo.xmlrpc.CookieTransport)
 
-    # Build beaker RPC object
-    bkr = xmlrpclib.ServerProxy('%s/RPC2' % opt.beaker, transport=TransportClass())
-
-    # login first
-    bkr.auth.login_password(opt.beaker_user, config['beaker_password'])
+    # Build XML-RPC object (this is Beaker Proxy, not Beaker HTTP server)
+    bkr = xmlrpclib.ServerProxy(opt.beaker, transport=TransportClass())
 
     # get a list of all Beaker distros
-    bkr_distros = bkr.distrotrees.filter({})
+    bkr_distros = bkr.get_distro_trees()
     distros = {}
     for d in bkr_distros:
         name = d['distro_name']
@@ -131,7 +120,6 @@ if __name__ == "__main__":
         else:
             distros[name] = [arch]
     bkr_distros = distros
-
 
     # get a list of all Fedora snapshots in mash
     mash_distros = []
@@ -160,7 +148,6 @@ if __name__ == "__main__":
                 distro['variant'] = make_variant(treeinfo.get('general', 'variant'))
 
                 repo = "%s/%s/%s/%s/os" % (opt.mash, dir, version, arch)
-                repo = repo.replace('//', '/')
                 distro['urls'] = [repo]
                 distro['repos'] = [
                     {
@@ -200,7 +187,5 @@ if __name__ == "__main__":
             print "INFO: %s-%s is already in Beaker!" % (name, arch)
             continue
 
-        distro_tree_id = bkr.labcontrollers.add_distro_tree(distro)
+        distro_tree_id = bkr.add_distro_tree(distro)
         print "INFO: Added %s-%s as %d!" % (name, arch, distro_tree_id)
-
-    bkr.auth.logout()
