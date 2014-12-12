@@ -124,8 +124,6 @@ if __name__ == "__main__":
     # get a list of all Fedora snapshots in mash
     mash_distros = []
     for dir in get_snapshot_dirs(opt.mash):
-        if len(mash_distros) > 2:
-            break
         for version in get_versions("%s/%s" % (opt.mash, dir)):
             for arch in get_arches("%s/%s/%s" % (opt.mash, dir, version)):
                 distro = {}
