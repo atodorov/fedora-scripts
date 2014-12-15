@@ -97,7 +97,9 @@ if __name__ == "__main__":
     if not opt.mash:
         print "ERROR: Mash URL is not specified."
         sys.exit(1)
-    opt.mash = opt.mash.strip('/')
+    # replace koji FQDN with internal IP address b/c (maybe) it doesn't resolve properly
+    # inside Beaker's environment
+    opt.mash = opt.mash.replace('koji.fedoraproject.org', '10.5.125.63').strip('/')
 
     # build a transport which supports cookies.
     # cookies are used for authentication
