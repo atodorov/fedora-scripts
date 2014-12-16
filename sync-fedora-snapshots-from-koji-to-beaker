@@ -148,7 +148,9 @@ if __name__ == "__main__":
                 distro['arch'] = treeinfo.get('general', 'arch')
                 distro['variant'] = make_variant(treeinfo.get('general', 'variant'))
 
-                repo = "%s/%s/%s/%s/os" % (opt.mash, dir, version, arch)
+                # NB: trailing / after os/ is important.
+                # without it Beaker dies when trying to fetch install images
+                repo = "%s/%s/%s/%s/os/" % (opt.mash, dir, version, arch)
                 distro['urls'] = [repo]
                 distro['repos'] = [
                     {
