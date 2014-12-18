@@ -4,6 +4,9 @@
 #
 #   Copyright (c) 2014, Alexander Todorov <atodorov@nospam.redhat.com>
 #
+#   Note: latest version of this script will be at
+#         https://bitbucket.org/fedoraqa/task-import-to-beaker/src
+#
 ################################################################################
 
 import io
@@ -98,7 +101,7 @@ if __name__ == "__main__":
         print "ERROR: Mash URL is not specified."
         sys.exit(1)
     # replace koji FQDN with internal IP address b/c (maybe) it doesn't resolve properly
-    # inside Beaker's environment
+    # inside Beaker's environment       
     opt.mash = opt.mash.strip('/').replace('koji.fedoraproject.org', '10.5.125.63')
 
     # build a transport which supports cookies.
