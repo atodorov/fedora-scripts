@@ -1,0 +1,152 @@
+#!/usr/bin/env python
+
+import os
+import sys
+import json
+
+rect_size = 11
+rect_padd = 2
+
+if len(sys.argv) != 2:
+    print "USAGE: %s <reports-dir>" % sys.argv[0]
+    sys.exit(1)
+
+reports = {}
+
+
+def rect(**args):
+    attrs = ""
+    for k in args.keys():
+        attrs += '%s="%s" ' % (k, args[k])
+
+    return "<rect %s/>" % attrs
+
+def color(cnt):
+    """
+        Return darker colors for higher counts.
+    """
+    if cnt == 0:
+        return "#bbbbbb"
+
+    if 0 < cnt <= 10:
+        return "#15efa4"
+    elif 10 < cnt <= 20:
+        return "#17cc8e"
+    elif 20 < cnt <= 30:
+        return "#2dc18d"
+    elif 30 < cnt <= 40:
+        return "#228a66"
+    elif 40 < cnt <= 50:
+        return "#2e735b"
+    elif 50 < cnt <= 60:
+        return "#2e734f"
+    elif 60 < cnt <= 70:
+        return "#2d6146"
+    elif 70 < cnt <= 80:
+        return "#2d6137"
+    elif 80 < cnt <= 90:
+        return "#1c5326"
+    elif 90 < cnt <= 100:
+        return "1c5324"
+    else: # 100 < cnt
+        return "#2b4d30"
+
+
+def group(idx_range, idx, data, horizontal=True, tx=0, ty=0, id=""):
+    g = """
+<g transform="translate(%d, %d)" id="%s">
+    <text x="0" y="11" style="font-size:10px;" >%s</text>
+%s
+</g>
+"""
+    r = ""
+    j = 0
+
+    for i in idx_range:
+        if i in idx: # this is a valid index
+            rargs = {
+                'width' : rect_size,
+                'height' : rect_size,
+                'fill' : color(data[i]),
+                'data-count' : data[i],
+                'line-number': i,
+            }
+            offset = j*(rect_size+rect_padd)
+            if horizontal:
+                rargs['x'] = offset
+            else:
+                rargs['y'] = offset
+            r += "    " + rect(**rargs) + "\n"
+        j += 1
+    return g % (tx, ty, id, id, r.rstrip())
+
+# load coverage reports from JSON files
+for root, dirs, files in os.walk(sys.argv[1]):
+    for name in files:
+        full_name = os.path.join(root, name)
+        try:
+            test_label = os.path.relpath(full_name, sys.argv[1])
+            test_label = test_label.replace('.json', '')
+
+            reports[test_label] = json.loads(open(full_name).read())
+        except:
+            pass
+
+
+# calculates how many times lines have been covered by
+# different tests
+
+total_coverage = {}
+max_line = 0
+min_line = 100
+
+for test_label in reports.keys():
+    for f in reports[test_label].keys():
+        if f == "TOTAL":
+            continue
+
+        if not f.startswith('pykickstart'):
+            continue
+
+        # initialize data for this file
+        if not total_coverage.has_key(f):
+            total_coverage[f] = {}
+
+        statements = reports[test_label][f]['statements']
+        missing = reports[test_label][f]['missing']
+
+        for line in statements:
+            if line > max_line:
+                max_line = line
+
+            if line < min_line:
+                min_line = line
+
+            # count how many times this line of code was executed
+            if not total_coverage[f].has_key(line):
+                total_coverage[f][line] = 0
+
+            if not line in missing:
+                total_coverage[f][line] += 1
+
+
+i = 0
+print '<svg width="%d" height="%d">' % ((rect_size+rect_padd)*max_line, (rect_size+rect_padd)*len(total_coverage.keys()))
+keys = total_coverage.keys()
+keys.sort()
+for f in keys:
+    data = total_coverage[f]
+    if not data:
+        continue
+
+    lines = data.keys()
+    lines.sort()
+    g = group(range(min_line, max_line+1), lines, data, True, 0, i*(rect_size+rect_padd), f)
+    print g
+
+    i += 1
+
+#    if i>= 2:
+#        break
+
+print "</svg>"
