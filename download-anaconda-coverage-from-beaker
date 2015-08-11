@@ -1,0 +1,89 @@
+#!/usr/bin/env python
+
+# Copyright (c) 2015, Alexander Todorov <atodorov@redhat.com>
+
+import os
+import sys
+import httplib
+import optparse
+from bkr.client import conf
+from bkr.client.main import BeakerCommandContainer
+
+def download(url, filename):
+    (proto, host_path) = url.split('//')
+    (host_port, path) = host_path.split('/', 1)
+    path = '/' + path
+
+    if url.startswith('https'):
+        conn = httplib.HTTPSConnection(host_port)
+    else:
+        conn = httplib.HTTPConnection(host_port)
+
+    conn.request("GET", path)
+    response = conn.getresponse()
+
+    if (response.status == 404):
+        raise Exception("404 - %s not found" % url)
+
+    f = open(filename, "wb")
+    f.write(response.read())
+    f.close()
+
+
+if __name__ == "__main__":
+    p = optparse.OptionParser(
+                description="Download anaconda.coverage files from Beaker jobs"
+                )
+    p.add_option("-b", "--beaker", dest="beaker", action="store",
+                help="Override Beaker hub URL.")
+    p.add_option("-d", "--dir", dest="dir", action="store", default=".",
+                help="Directory to download files to.")
+    p.add_option('', '--max-job', dest="max_job", metavar="JOB_ID",
+                help="Filter jobs <= JOB_ID")
+    p.add_option('', '--min-job', dest="min_job", metavar="JOB_ID", default=0,
+                help="Filter jobs >= JOB_ID")
+    p.add_option('-o', '--owner', dest="owner", default=None, help="Job owner")
+    p.add_option('-u', '--url-only', dest="url_only", action="store_true",
+                help="Only print URLs without downloading.")
+
+    (opt, args) = p.parse_args()
+
+    if opt.beaker:
+        conf['HUB_URL'] = opt.beaker
+
+    cmd_container = BeakerCommandContainer(conf=conf)
+    cmd_container.set_hub()
+    if not cmd_container.hub and not conf:
+        sys.stderr.write("Configuration file not found. Please create an /etc/beaker/client.conf "
+                 "or ~/.beaker_client/config configuration file.\n")
+        sys.exit(1)
+    bkr = cmd_container.hub
+
+
+    filter_dict = {'minid' : opt.min_job}
+    if opt.max_job and opt.max_job > opt.min_job:
+        filter_dict['maxid'] = int(opt.max_job)
+
+    if opt.owner:
+        filter_dict['owner'] = opt.owner
+
+    jobs = bkr.jobs.filter(filter_dict)
+    jobs.sort()
+
+    for job in jobs:
+        logfiles = bkr.taskactions.files(job)
+        for log in logfiles:
+            if not log['url'].endswith('anaconda.coverage'):
+                continue
+
+            if opt.url_only:
+                print log['url']
+            else:
+                tinfo = bkr.taskactions.task_info(job)
+                local_filename = "anaconda.coverage.%s.%s" % (job, tinfo['method'].strip())
+                local_filename = local_filename.replace(' ', '_').replace('/', '')
+                full_name = os.path.abspath(os.path.join(opt.dir, local_filename))
+
+                sys.stdout.write(log['url'] + " --> ")
+                download(log['url'], full_name)
+                print local_filename
