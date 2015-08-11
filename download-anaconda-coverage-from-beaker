@@ -7,6 +7,7 @@ import sys
 import httplib
 import optparse
 from bkr.client import conf
+import xml.etree.ElementTree as ET
 from bkr.client.main import BeakerCommandContainer
 
 def download(url, filename):
@@ -71,19 +72,28 @@ if __name__ == "__main__":
     jobs.sort()
 
     for job in jobs:
-        logfiles = bkr.taskactions.files(job)
-        for log in logfiles:
-            if not log['url'].endswith('anaconda.coverage'):
-                continue
+        job_info = bkr.taskactions.task_info(job)
+        job_xml = bkr.taskactions.to_xml(job)
+        job_xml = ET.fromstring(job_xml)
 
-            if opt.url_only:
-                print log['url']
-            else:
-                tinfo = bkr.taskactions.task_info(job)
-                local_filename = "anaconda.coverage.%s.%s" % (job, tinfo['method'].strip())
-                local_filename = local_filename.replace(' ', '_').replace('/', '')
-                full_name = os.path.abspath(os.path.join(opt.dir, local_filename))
+        for recipe in job_xml.iter('recipe'):
+            recipe_id = "R:%s" % recipe.get('id')
+            whiteboard = recipe.get('whiteboard').strip()
+            if not whiteboard:
+                whiteboard = "%s.%s" % (job_info['method'].strip(), recipe_id)
 
-                sys.stdout.write(log['url'] + " --> ")
-                download(log['url'], full_name)
-                print local_filename
+            logfiles = bkr.taskactions.files(recipe_id)
+            for log in logfiles:
+                if not log['url'].endswith('anaconda.coverage'):
+                    continue
+
+                if opt.url_only:
+                    print log['url']
+                else:
+                    local_filename = "anaconda.coverage.%s.%s" % (job, whiteboard)
+                    local_filename = local_filename.replace(' ', '_').replace('/', '')
+                    full_name = os.path.abspath(os.path.join(opt.dir, local_filename))
+
+                    sys.stdout.write(log['url'] + " --> ")
+                    download(log['url'], full_name)
+                    print local_filename
