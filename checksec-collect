@@ -1,0 +1,31 @@
+#!/usr/bin/bash
+
+## execute checksec against all ELF objects currently installed
+## according to https://fedoraproject.org/wiki/Changes/Harden_All_Packages
+## Running checksec should always report only 
+## Full RELRO Canary found NX enabled PIE enabled No RPATH No RUNPATH
+
+previous_rpm=""
+
+for r in `rpm -qa | sort`; do
+    for f in `rpm -ql $r`; do
+        file $f | grep "ELF" >/dev/null
+        if [ $? -eq 0 ]; then
+            output=`checksec --file $f | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g" | grep -v "RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE"`
+            cnt=`echo "$output" | grep -c -v "Full RELRO      Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH"`
+# todo: share libraries report DSO instead of PIE enabled.
+            if [ $cnt -gt 0 ]; then # failure found
+                if [ "$previous_rpm" != "$r" ]; then
+                    previous_rpm=$r
+                    echo
+                    echo
+                    echo
+                    echo "----------"
+                    echo "$r.rpm"
+                    echo "RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE"
+                fi
+                echo "$output"
+            fi
+        fi
+    done
+done
