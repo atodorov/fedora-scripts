@@ -7,13 +7,32 @@
 
 previous_rpm=""
 
+#for r in systemd mingetty rsyslog abrt NetworkManager ntp acpid openssh openssh-client openssh-server gdm sendmail postfix exim; do
 for r in `rpm -qa | sort`; do
     for f in `rpm -ql $r`; do
         file $f | grep "ELF" >/dev/null
         if [ $? -eq 0 ]; then
-            output=`checksec --file $f | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g" | grep -v "RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE"`
-            cnt=`echo "$output" | grep -c -v "Full RELRO      Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH"`
-# todo: share libraries report DSO instead of PIE enabled.
+            output=`checksec --file $f | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g" | \
+                    grep -v "RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE"`
+            # fweimer: Yes, that's expected, DSOs on x86_64 are always position-independent.
+            cnt=`echo "$output" | \
+                grep -v "Full RELRO      Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH" | \
+                grep -v "Full RELRO      Canary found      NX enabled    DSO             No RPATH   No RUNPATH" | \
+                wc -l`
+
+            if [ $cnt -gt 0 ]; then # failure found
+                # check for RPATH failure
+                rcnt=`echo "$output" | \
+                sed "s/Full RELRO//" | sed "s/Canary found//" | sed "s/NX enabled//" | sed "s/No RPATH//" | sed "s/No RUNPATH//" | \
+                sed "s/DSO//" | sed "s/PIE enabled//" | tr -s " " | grep "^ RPATH /" | wc -l`
+
+                # RPATH found => exclude acceptable RPATH locations
+                if [ $rcnt -gt 0 ]; then
+                    cnt=`readelf -d $f | grep RPATH | grep -v "/usr/lib.*/.*" | wc -l`
+                fi
+            fi
+
+
             if [ $cnt -gt 0 ]; then # failure found
                 if [ "$previous_rpm" != "$r" ]; then
                     previous_rpm=$r
