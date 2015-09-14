@@ -5,6 +5,13 @@
 ## Running checksec should always report only 
 ## Full RELRO Canary found NX enabled PIE enabled No RPATH No RUNPATH
 
+## Partial RELRO and No canary found will be considered bugs:
+## fweimer: Patial RELRO is likely a bug.
+## fweimer: No canary found can also happen if the DSO is empty.
+## fweimer: Or contains only functions which do not need stack protector instrumentation.
+## atodorov: how about binaries ?
+## fweimer: Same thing, except that small binaries are rare, so No canary found is even more likely a bug.
+
 previous_rpm=""
 
 #for r in systemd mingetty rsyslog abrt NetworkManager ntp acpid openssh openssh-client openssh-server gdm sendmail postfix exim; do
@@ -31,7 +38,6 @@ for r in `rpm -qa | sort`; do
                     cnt=`readelf -d $f | grep RPATH | grep -v "/usr/lib.*/.*" | wc -l`
                 fi
             fi
-
 
             if [ $cnt -gt 0 ]; then # failure found
                 if [ "$previous_rpm" != "$r" ]; then
