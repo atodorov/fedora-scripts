@@ -40,6 +40,7 @@ for r in `rpm -qa | sort`; do
                     echo
                     echo
                     echo "----------"
+                    rpm -q $r --qf "%{SOURCERPM}\n"
                     echo "$r.rpm"
                     echo "RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE"
                 fi
