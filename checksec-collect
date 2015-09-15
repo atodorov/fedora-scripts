@@ -14,7 +14,7 @@
 
 previous_rpm=""
 
-#for r in systemd mingetty rsyslog abrt NetworkManager ntp acpid openssh openssh-client openssh-server gdm sendmail postfix exim; do
+#for r in systemd mingetty rsyslog abrt NetworkManager ntp acpid openssh openssh-clients openssh-server gdm sendmail postfix exim; do
 for r in `rpm -qa | sort`; do
     for f in `rpm -ql $r`; do
         file $f | grep "ELF" >/dev/null
