@@ -14,9 +14,19 @@
 
 previous_rpm=""
 
-#for r in systemd mingetty rsyslog abrt NetworkManager ntp acpid openssh openssh-clients openssh-server gdm sendmail postfix exim; do
-for r in `rpm -qa | sort`; do
-    for f in `rpm -ql $r`; do
+DIR="$1"
+if [ -z "$DIR" ]; then
+    DIR=`pwd`
+fi
+
+for r in `find "$DIR" -name "*.x86_64.rpm" | sort`; do
+    NAME=`rpm -qp $r --qf "%{name}\n"`
+    SOURCE=`rpm -qp $r --qf "%{SOURCERPM}\n"`
+    TMPDIR=`mktemp -d /tmp/$NAME-XXXXX`
+    pushd $TMPDIR >/dev/null
+    rpm2cpio $r | cpio -i -d 2>/dev/null
+
+    for f in `find -type f | sort`; do
         file $f | grep "ELF" >/dev/null
         if [ $? -eq 0 ]; then
             output=`checksec --file $f | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g" | \
@@ -31,7 +41,7 @@ for r in `rpm -qa | sort`; do
                 # check for RPATH failure
                 rcnt=`echo "$output" | \
                 sed "s/Full RELRO//" | sed "s/Canary found//" | sed "s/NX enabled//" | sed "s/No RPATH//" | sed "s/No RUNPATH//" | \
-                sed "s/DSO//" | sed "s/PIE enabled//" | tr -s " " | grep "^ RPATH /" | wc -l`
+                sed "s/DSO//" | sed "s/PIE enabled//" | tr -s " " | grep "^ RPATH \./" | wc -l`
 
                 # RPATH found => exclude acceptable RPATH locations
                 if [ $rcnt -gt 0 ]; then
@@ -46,12 +56,15 @@ for r in `rpm -qa | sort`; do
                     echo
                     echo
                     echo "----------"
-                    rpm -q $r --qf "%{SOURCERPM}\n"
-                    echo "$r.rpm"
+                    echo $SOURCE
+                    echo "$r"
                     echo "RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE"
                 fi
                 echo "$output"
             fi
         fi
     done
+
+    popd >/dev/null
+    rm -rf $TMPDIR
 done
