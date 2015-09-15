@@ -20,8 +20,8 @@ if [ -z "$DIR" ]; then
 fi
 
 for r in `find "$DIR" -name "*.x86_64.rpm" | sort`; do
-    NAME=`rpm -qp $r --qf "%{name}\n"`
-    SOURCE=`rpm -qp $r --qf "%{SOURCERPM}\n"`
+    NAME=`rpm -qp $r --qf "%{name}\n" 2>/dev/null`
+    SOURCE=`rpm -qp $r --qf "%{SOURCERPM}\n" 2>/dev/null`
     TMPDIR=`mktemp -d /tmp/$NAME-XXXXX`
     pushd $TMPDIR >/dev/null
     rpm2cpio $r | cpio -i -d 2>/dev/null
