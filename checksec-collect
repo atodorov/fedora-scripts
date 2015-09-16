@@ -12,6 +12,22 @@
 ## atodorov: how about binaries ?
 ## fweimer: Same thing, except that small binaries are rare, so No canary found is even more likely a bug.
 
+## Partial vs Full RELRO info:
+## http://tk-blog.blogspot.bg/2009/02/relro-not-so-well-known-memory.html
+
+## for stack canaries see:
+## systemd-cat -t "checksec-collect" echo "WORKING DIR CHANGED TO" 
+
+## NX memory protection:
+## https://en.wikipedia.org/wiki/NX_bit#Linux
+
+## PIE
+## https://securityblog.redhat.com/2012/11/28/position-independent-executables-pie/
+
+## RPATH and RUNPATH
+## https://fedoraproject.org/wiki/Packaging:Guidelines#Beware_of_Rpath
+## http://blog.tremily.us/posts/rpath/
+
 function doLog {
     systemd-cat -t "checksec-collect" echo "$1"
 }
