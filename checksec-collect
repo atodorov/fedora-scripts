@@ -12,6 +12,10 @@
 ## atodorov: how about binaries ?
 ## fweimer: Same thing, except that small binaries are rare, so No canary found is even more likely a bug.
 
+function doLog {
+    systemd-cat -t "checksec-collect" echo "$1"
+}
+
 previous_rpm=""
 
 DIR="$1"
@@ -23,6 +27,7 @@ for r in `find "$DIR" -name "*.x86_64.rpm" | sort`; do
     NAME=`rpm -qp $r --qf "%{name}\n" 2>/dev/null`
     SOURCE=`rpm -qp $r --qf "%{SOURCERPM}\n" 2>/dev/null`
     TMPDIR=`mktemp -d /tmp/$NAME-XXXXX`
+    doLog "inspecting $NAME in $TMPDIR"
     pushd $TMPDIR >/dev/null
     rpm2cpio $r | cpio -i -d 2>/dev/null
 
