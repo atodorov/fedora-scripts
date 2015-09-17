@@ -58,6 +58,18 @@ for r in `find "$DIR" -name "*.x86_64.rpm" | sort`; do
     find -type f | sort | while read f; do
         file "$f" | grep "ELF" >/dev/null
         if [ $? -eq 0 ]; then
+            if [ `echo "$f" | grep -c "^\./usr/lib.*/ocaml/"` -gt 0 ]; then
+                # atodorov> I see .o files, .so files and some .cmxs ones.
+                # Should all of them be ignored then ?
+
+                # rjones> Yes.  Everything under here is for developers.  The .so files would
+                # only be run under the bytecode interpreter, and Fedora only builds
+                # those for the benefit of developers.
+                # All Fedora-shipped OCaml applications should use native code, and go
+                # in /usr/bin.
+                doLog "skipping $f b/c libdir/ocaml/"
+                continue
+            fi
             output=`checksec --file "$f" | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g" | \
                     grep -v "RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE"`
             # fweimer: Yes, that's expected, DSOs on x86_64 are always position-independent.

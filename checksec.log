@@ -5378,7 +5378,6 @@ coccinelle-1.0.2-1.fc24.src.rpm
 /mnt/fedora/Packages/c/coccinelle-1.0.2-1.fc24.x86_64.rpm
 RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/lib64/coccinelle/spatch.opt
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllpycaml_stubs.so
 
 
 
@@ -24660,7 +24659,6 @@ js-of-ocaml-2.4-8.fc23.src.rpm
 /mnt/fedora/Packages/j/js-of-ocaml-2.4-8.fc23.x86_64.rpm
 RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/js_of_ocaml
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlljs_of_ocaml.so
 
 
 
@@ -34491,14 +34489,6 @@ Full RELRO      No canary found   NX enabled    DSO             No RPATH   No RU
 
 
 ----------
-nbdkit-1.1.10-3.fc24.src.rpm
-/mnt/fedora/Packages/n/nbdkit-plugin-ocaml-devel-1.1.10-3.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/NBDKit.o
-
-
-
-----------
 nbtscan-1.5.1-14.fc23.src.rpm
 /mnt/fedora/Packages/n/nbtscan-1.5.1-14.fc23.x86_64.rpm
 RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
@@ -36397,70 +36387,6 @@ Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RU
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/ocamllex.opt
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/ocamlopt.opt
 Partial RELRO   No canary found   NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/ocamlyacc
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/bigarray.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/graphics.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/libasmrun_shared.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/libcamlrun_shared.so
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/nums.cmxs
-Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/lib64/ocaml/objinfo_helper
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlbuild/ocamlbuild_executor.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlbuild/ocamlbuild.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlbuild/ocamlbuild_plugin.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlbuild/ocamlbuild_unix_plugin.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/profiling.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/std_exit.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/std_exit.p.o
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/str.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/unix.cmxs
-
-
-
-----------
-ocaml-ancient-0.9.0-25.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-ancient-0.9.0-25.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllancient.so
-
-
-
-----------
-apron-0.9.10-32.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-apron-0.9.10-32.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/apron/libap_ppl_caml.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/apron/libapron_caml.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/apron/libboxD_caml.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/apron/libboxMPFR_caml.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/apron/libboxMPQ_caml.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/apron/liboctD_caml.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/apron/liboctMPQ_caml.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/apron/libpolkaGrid_caml.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/apron/libpolkaMPQ_caml.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/apron/libpolkaRll_caml.so
-
-
-
-----------
-ocaml-augeas-0.5-18.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-augeas-0.5-18.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllmlaugeas.so
-
-
-
-----------
-ocaml-base64-2.0.0-3.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-base64-devel-2.0.0-3.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/base64/base64.cmxs
-
-
-
-----------
-ocaml-biniou-1.0.9-17.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-biniou-1.0.9-17.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/biniou/biniou.cmxs
 
 
 
@@ -36469,56 +36395,6 @@ ocaml-biniou-1.0.9-17.fc24.src.rpm
 /mnt/fedora/Packages/o/ocaml-biniou-devel-1.0.9-17.fc24.x86_64.rpm
 RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/ocaml-bdump
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/biniou/bi_dump.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/biniou/bi_inbuf.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/biniou/bi_io.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/biniou/bi_outbuf.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/biniou/bi_share.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/biniou/bi_stream.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/biniou/bi_util.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/biniou/bi_vint.o
-
-
-
-----------
-ocaml-bin-prot-2.0.9-20.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-bin-prot-2.0.9-20.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllbin_prot.so
-
-
-
-----------
-ocaml-bitstring-2.0.4-15.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-bitstring-2.0.4-15.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllbitstring.so
-
-
-
-----------
-brltty-5.2-11.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-brlapi-0.6.3-11.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllbrlapi_stubs.so
-
-
-
-----------
-ocaml-cairo-0.4.7-0.8.git675e51b.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-cairo-0.4.7-0.8.git675e51b.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllcairo2.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllcairo_gtk.so
-
-
-
-----------
-ocaml-calendar-2.04-2.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-calendar-2.04-2.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/calendar/calendarLib.cmxs
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/calendar/calendarLib.o
 
 
 
@@ -36527,22 +36403,6 @@ ocaml-camlidl-1.05-33.fc24.src.rpm
 /mnt/fedora/Packages/o/ocaml-camlidl-1.05-33.fc24.x86_64.rpm
 RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/camlidl
-
-
-
-----------
-ocaml-camlimages-4.1.0-18.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-camlimages-4.1.0-18.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllcamlimages_all_formats.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllcamlimages_exif.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllcamlimages_freetype.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllcamlimages_gif.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllcamlimages_jpeg.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllcamlimages_png.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllcamlimages_supported.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllcamlimages_tiff.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllcamlimages_xpm.so
 
 
 
@@ -36556,85 +36416,6 @@ Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RU
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/camlp4orf.opt
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/camlp4rf.opt
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/camlp4r.opt
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Bin.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Filters/Camlp4AstLifter.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Filters/Camlp4ExceptionTracer.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Filters/Camlp4FoldGenerator.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Filters/Camlp4LocationStripper.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Filters/Camlp4MapGenerator.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Filters/Camlp4MetaGenerator.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Filters/Camlp4Profiler.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Filters/Camlp4TrashRemover.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Parsers/Camlp4AstLoader.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Parsers/Camlp4DebugParser.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Parsers/Camlp4GrammarParser.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Parsers/Camlp4ListComprehension.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Parsers/Camlp4MacroParser.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Parsers/Camlp4OCamlOriginalQuotationExpander.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Parsers/Camlp4OCamlParser.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Parsers/Camlp4OCamlParserParser.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Parsers/Camlp4OCamlReloadedParser.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Parsers/Camlp4OCamlRevisedParser.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Parsers/Camlp4OCamlRevisedParserParser.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Parsers/Camlp4OCamlRevisedQuotationExpander.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Parsers/Camlp4QuotationCommon.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Parsers/Camlp4QuotationExpander.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Printers/Camlp4AstDumper.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Printers/Camlp4AutoPrinter.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Printers/Camlp4NullDumper.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Printers/Camlp4OCamlAstDumper.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Printers/Camlp4OCamlPrinter.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Printers/Camlp4OCamlRevisedPrinter.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/camlp4prof.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Top/Rprint.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp4/Camlp4Top/Top.o
-
-
-
-----------
-ocaml-camlp5-6.14-1.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-camlp5-6.14-1.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/odyl.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_extend_m.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_extend.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_extfold.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_extfun.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_extprint.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_fstream.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_lefteval.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_lexer.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_lisp.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_macro.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_mkast.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_mktest.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_o_fast.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_o.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_oop.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_op.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_pprintf.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_pragma.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_reloc.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_r.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_rp.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_scheme.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pa_sml.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pr_depend.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pr_dump.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pr_extend.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pr_extfun.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pr_extprint.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pr_null.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pr_o.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pr_op.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pr_r.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pr_ro.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pr_rp.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pr_scheme.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/pr_schemep.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/q_ast.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/q_MLast.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/camlp5/q_phony.o
 
 
 
@@ -36665,24 +36446,6 @@ Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RU
 
 
 ----------
-ocaml-4.02.3-1.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-compiler-libs-4.02.3-1.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/compiler-libs/main.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/compiler-libs/optmain.o
-
-
-
-----------
-ocaml-config-file-1.2-8.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-config-file-devel-1.2-8.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/config-file/config_file.cmxs
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/config-file/config_file.o
-
-
-
-----------
 ocaml-cppo-1.1.2-2.fc24.src.rpm
 /mnt/fedora/Packages/o/ocaml-cppo-1.1.2-2.fc24.x86_64.rpm
 RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
@@ -36691,52 +36454,10 @@ Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RU
 
 
 ----------
-ocaml-cryptokit-1.9-16.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-cryptokit-1.9-16.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/cryptokit/cryptokit.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllcryptokit_stubs.so
-
-
-
-----------
 ocaml-csv-1.3.1-13.fc24.src.rpm
 /mnt/fedora/Packages/o/ocaml-csv-1.3.1-13.fc24.x86_64.rpm
 RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/csvtool
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/csv/csv.cmxs
-
-
-
-----------
-ocaml-curl-0.7.5-1.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-curl-0.7.5-1.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllcurl-helper.so
-
-
-
-----------
-ocaml-curl-0.7.5-1.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-curl-devel-0.7.5-1.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/curl/curl_lwt.o
-
-
-
-----------
-ocaml-curses-1.0.3-31.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-curses-1.0.3-31.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllcurses_stubs.so
-
-
-
-----------
-ocaml-dbus-0.30-3.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-dbus-0.30-3.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlldbus_stubs.so
 
 
 
@@ -36749,52 +36470,10 @@ Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RU
 
 
 ----------
-ocaml-easy-format-1.0.2-13.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-easy-format-1.0.2-13.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/easy-format/easy_format.cmxs
-
-
-
-----------
-ocaml-easy-format-1.0.2-13.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-easy-format-devel-1.0.2-13.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/easy-format/easy_format.o
-
-
-
-----------
-ocaml-expat-0.9.1-38.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-expat-0.9.1-38.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllmlexpat.so
-
-
-
-----------
-ocaml-fileutils-0.4.5-15.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-fileutils-0.4.5-15.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/fileutils/fileutils.cmxs
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/fileutils/fileutils-str.cmxs
-
-
-
-----------
 ocaml-findlib-1.5.5-7.fc24.src.rpm
 /mnt/fedora/Packages/o/ocaml-findlib-1.5.5-7.fc24.x86_64.rpm
 RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/ocamlfind
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/findlib/findlib.cmxs
-
-
-
-----------
-ocaml-gettext-0.3.5-7.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-gettext-0.3.5-7.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllgettextStub.so
 
 
 
@@ -36807,189 +36486,10 @@ Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RU
 
 
 ----------
-ocaml-gsl-1.18.4-1.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-gsl-1.18.4-1.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllgsl_stubs.so
-
-
-
-----------
-ocaml-gsl-1.18.4-1.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-gsl-devel-1.18.4-1.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/gsl/gsl.cmxs
-
-
-
-----------
-hivex-1.3.11-13.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-hivex-1.3.11-13.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllmlhivex.so
-
-
-
-----------
 ocaml-json-wheel-1.0.6-25.fc24.src.rpm
 /mnt/fedora/Packages/o/ocaml-json-wheel-1.0.6-25.fc24.x86_64.rpm
 RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/jsoncat
-
-
-
-----------
-ocaml-json-wheel-1.0.6-25.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-json-wheel-devel-1.0.6-25.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/json-wheel/json_compat.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/json-wheel/json_io.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/json-wheel/json_lexer.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/json-wheel/json_parser.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/json-wheel/json_type.o
-
-
-
-----------
-ocaml-lablgl-1.05-17.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-lablgl-1.05-17.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlllablgl.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlllablglut.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlltogl.so
-
-
-
-----------
-ocaml-lablgtk-2.18.3-7.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-lablgtk-2.18.3-7.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lablgtk2/lablglade.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lablgtk2/lablgnomecanvas.cmxs
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lablgtk2/lablgnomeui.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lablgtk2/lablgtk.cmxs
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lablgtk2/lablgtkgl.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lablgtk2/lablgtksourceview2.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lablgtk2/lablgtkspell.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lablgtk2/lablrsvg.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlllablglade2.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlllablgnomecanvas.so
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlllablgnomeui.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlllablgtk2.so
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlllablgtkgl2.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlllablgtksourceview2.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlllablgtkspell.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlllablrsvg.so
-
-
-
-----------
-ocaml-lablgtk-2.18.3-7.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-lablgtk-devel-2.18.3-7.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/lablgtk2/gtkInit.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/lablgtk2/gtkThread.o
-
-
-
-----------
-ocaml-labltk-8.06.0-5.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-labltk-8.06.0-5.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlllabltk.so
-
-
-
-----------
-ocaml-labltk-8.06.0-5.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-labltk-devel-8.06.0-5.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/camltk.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cBell.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cButton.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cCanvas.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cCheckbutton.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cClipboard.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cDialog.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cEncoding.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cEntry.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cFocus.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cFont.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cFrame.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cGrab.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cGrid.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cImagebitmap.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cImage.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cImagephoto.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cLabel.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cListbox.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cMenubutton.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cMenu.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cMessage.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cOptionmenu.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cOption.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cPack.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cPalette.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cPixmap.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cPlace.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cRadiobutton.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cResource.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cScale.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cScrollbar.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cSelection.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cText.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cTk.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cTkvars.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cTkwait.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cToplevel.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cWinfo.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/labltk/cWm.o
-
-
-
-----------
-ocaml-lacaml-7.2.5-2.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-lacaml-7.2.5-2.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lacaml/lacaml.cmxs
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lacaml/lacaml_top.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlllacaml_stubs.so
-
-
-
-----------
-libguestfs-1.31.6-1.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-libguestfs-1.31.6-1.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllmlguestfs.so
-
-
-
-----------
-ocaml-libvirt-0.6.1.4-10.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-libvirt-0.6.1.4-10.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllmllibvirt.so
-
-
-
-----------
-ocaml-lwt-2.5.0-4.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-lwt-2.5.0-4.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lwt/lwt.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lwt/lwt-glib.cmxs
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lwt/lwt-log.cmxs
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lwt/lwt-preemptive.cmxs
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lwt/lwt-react.cmxs
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lwt/lwt-simple-top.cmxs
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lwt/lwt-ssl.cmxs
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lwt/lwt-syntax.cmxs
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lwt/lwt-syntax-log.cmxs
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lwt/lwt-syntax-options.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/lwt/lwt-unix.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlllwt-glib_stubs.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dlllwt-unix_stubs.so
 
 
 
@@ -37002,69 +36502,10 @@ Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RU
 
 
 ----------
-ocaml-menhir-20141215-5.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-menhir-devel-20141215-5.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/menhirLib/menhirLib.o
-
-
-
-----------
-ocaml-mikmatch-1.0.7-9.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-mikmatch-1.0.7-9.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/mikmatch_pcre/run_mikmatch_pcre.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/mikmatch_str/run_mikmatch_str.o
-
-
-
-----------
-ocaml-mlgmpidl-1.2.1-0.17.20150204.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-mlgmpidl-1.2.1-0.17.20150204.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllgmp_caml.so
-
-
-
-----------
-ocaml-mysql-1.2.0-2.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-mysql-1.2.0-2.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllmysql_stubs.so
-
-
-
-----------
-ocaml-newt-0.9-28.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-newt-0.9-28.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllmlnewt.so
-
-
-
-----------
 ocaml-4.02.3-1.fc24.src.rpm
 /mnt/fedora/Packages/o/ocaml-ocamldoc-4.02.3-1.fc24.x86_64.rpm
 RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/ocamldoc.opt
-
-
-
-----------
-ocaml-ocamlgraph-1.8.6-5.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-ocamlgraph-1.8.6-5.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlgraph/graph.cmxs
-
-
-
-----------
-ocaml-ocamlgraph-1.8.6-5.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-ocamlgraph-devel-1.8.6-5.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlgraph/dgraph.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlgraph/graph.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlgraph/viewgraph.o
 
 
 
@@ -37084,31 +36525,6 @@ ocaml-ocamlnet-4.0.4-3.fc24.src.rpm
 RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/netplex-admin
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/ocamlrpcgen
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllequeue_tcl.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllnetaccel_c.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllnetgss-system.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllnetsys.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllnettls-gnutls.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllrpc_auth_local.so
-
-
-
-----------
-ocaml-ocamlnet-4.0.4-3.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-ocamlnet-devel-4.0.4-3.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/netplex/netplex_mt.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/netplex/netplex_mt.p.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/netsys/netsys_c_gprof.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/netsys/netsys_c_outofheap.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/netsys/netsys_gprof_init.p.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/netsys/netsys_oothr_mt_init.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/netsys/netsys_oothr_mt_init.p.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/netunidata/netmappings_iso.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/netunidata/netmappings_jp.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/netunidata/netmappings_kr.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/netunidata/netmappings_other.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/netunidata/netuniinit.o
 
 
 
@@ -37122,63 +36538,12 @@ Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RU
 
 
 ----------
-ocaml-ounit-2.0.0-16.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-ounit-2.0.0-16.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/oUnit/oUnitAdvanced.cmxs
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/oUnit/oUnit.cmxs
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/oUnit/oUnitThreads.cmxs
-
-
-
-----------
 ocaml-p3l-2.03-26.fc24.src.rpm
 /mnt/fedora/Packages/o/ocaml-p3l-2.03-26.fc24.x86_64.rpm
 RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/ocamlp3lc
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/ocamlp3lopt
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/ocamlp3ltop
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vprocess/basedefs.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vprocess/command_options.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vprocess/commlib.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vprocess/grafp3l.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vprocess/nodecode.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vprocess/p3lstream.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vprocess/parp3l.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vprocess/seqp3l.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vprocess/server.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vprocess/streams.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vprocess/template.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vprocess/version.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vthread/basedefs.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vthread/command_options.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vthread/commlib.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vthread/grafp3l.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vthread/nodecode.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vthread/p3lstream.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vthread/parp3l.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vthread/seqp3l.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vthread/server.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vthread/streams.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vthread/template.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/ocamlp3l/vthread/version.o
-
-
-
-----------
-ocaml-pcre-7.1.5-2.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-pcre-7.1.5-2.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/pcre/pcre.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllpcre_stubs.so
-
-
-
-----------
-ocaml-perl4caml-0.9.5-43.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-perl4caml-0.9.5-43.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllperl4caml.so
 
 
 
@@ -37191,142 +36556,10 @@ Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RU
 
 
 ----------
-plplot-5.11.1-1.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-plplot-5.11.1-1.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllplcairo_stubs.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllplplot_stubs.so
-
-
-
-----------
-ocaml-postgresql-2.0.7-11.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-postgresql-2.0.7-11.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/postgresql/postgresql.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllpostgresql_stubs.so
-
-
-
-----------
-ocaml-pxp-1.2.7-5.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-pxp-devel-1.2.7-5.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp1006/pxp_lex_link_cp1006.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp437/pxp_lex_link_cp437.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp737/pxp_lex_link_cp737.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp775/pxp_lex_link_cp775.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp850/pxp_lex_link_cp850.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp852/pxp_lex_link_cp852.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp855/pxp_lex_link_cp855.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp856/pxp_lex_link_cp856.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp857/pxp_lex_link_cp857.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp860/pxp_lex_link_cp860.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp861/pxp_lex_link_cp861.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp862/pxp_lex_link_cp862.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp863/pxp_lex_link_cp863.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp864/pxp_lex_link_cp864.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp865/pxp_lex_link_cp865.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp866/pxp_lex_link_cp866.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp869/pxp_lex_link_cp869.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-cp874/pxp_lex_link_cp874.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-iso885910/pxp_lex_link_iso885910.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-iso885913/pxp_lex_link_iso885913.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-iso885914/pxp_lex_link_iso885914.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-iso885915/pxp_lex_link_iso885915.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-iso885916/pxp_lex_link_iso885916.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-iso88591/pxp_lex_link_iso88591.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-iso88592/pxp_lex_link_iso88592.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-iso88593/pxp_lex_link_iso88593.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-iso88594/pxp_lex_link_iso88594.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-iso88595/pxp_lex_link_iso88595.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-iso88596/pxp_lex_link_iso88596.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-iso88597/pxp_lex_link_iso88597.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-iso88598/pxp_lex_link_iso88598.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-iso88599/pxp_lex_link_iso88599.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-koi8r/pxp_lex_link_koi8r.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-macroman/pxp_lex_link_macroman.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-usascii/pxp_lex_link_usascii.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-utf8/pxp_lex_link_utf8.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-windows1250/pxp_lex_link_windows1250.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-windows1251/pxp_lex_link_windows1251.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-windows1252/pxp_lex_link_windows1252.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-windows1253/pxp_lex_link_windows1253.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-windows1254/pxp_lex_link_windows1254.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-windows1255/pxp_lex_link_windows1255.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-windows1256/pxp_lex_link_windows1256.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-windows1257/pxp_lex_link_windows1257.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-lex-windows1258/pxp_lex_link_windows1258.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/pxp-ulex-utf8/pxp_ulex_link_utf8.o
-
-
-
-----------
-ocaml-react-1.2.0-1.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-react-1.2.0-1.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/react/react.cmxs
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/react/react_top.cmxs
-
-
-
-----------
-ocaml-res-4.0.5-11.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-res-4.0.5-11.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/res/res.cmxs
-
-
-
-----------
 ocaml-4.02.3-1.fc24.src.rpm
 /mnt/fedora/Packages/o/ocaml-runtime-4.02.3-1.fc24.x86_64.rpm
 RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/ocamlrun
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllbigarray.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllcamlstr.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllgraphics.so
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllnums.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllthreads.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllunix.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllvmthreads.so
-
-
-
-----------
-ocaml-SDL-0.9.1-14.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-SDL-0.9.1-14.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllsdlloaderstub.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllsdlmixerstub.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllsdlstub.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllsdlttfstub.so
-
-
-
-----------
-ocaml-sqlite-2.0.9-6.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-sqlite-2.0.9-6.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/sqlite3/sqlite3.cmxs
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllsqlite3_stubs.so
-
-
-
-----------
-ocaml-ssl-0.5.1-2.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-ssl-0.5.1-2.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllssl_stubs.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllssl_threads_stubs.so
-
-
-
-----------
-ocaml-tplib-1.3-19.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-tplib-1.3-19.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/tplib/zarith_plugin.cmxs
 
 
 
@@ -37352,57 +36585,10 @@ Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RU
 
 
 ----------
-ocaml-xmlm-1.2.0-15.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-xmlm-devel-1.2.0-15.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/xmlm/xmlm.cmxs
-
-
-
-----------
 ocaml-yojson-1.1.8-15.fc24.src.rpm
 /mnt/fedora/Packages/o/ocaml-yojson-1.1.8-15.fc24.x86_64.rpm
 RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/bin/ydump
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/yojson/yojson_biniou.cmxs
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/yojson/yojson.cmxs
-
-
-
-----------
-ocaml-yojson-1.1.8-15.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-yojson-devel-1.1.8-15.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/yojson/yojson_biniou.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/yojson/yojson.o
-
-
-
-----------
-z3-4.4.0-4.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-z3-4.4.0-4.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/Z3/dllz3ml.so
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/Z3/z3enums.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/Z3/z3native.o
-No RELRO        No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   ./usr/lib64/ocaml/Z3/z3.o
-
-
-
-----------
-ocaml-zarith-1.3-6.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-zarith-1.3-6.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllzarith.so
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/zarith/zarith.cmxs
-
-
-
-----------
-ocaml-zip-1.05-13.fc24.src.rpm
-/mnt/fedora/Packages/o/ocaml-zip-1.05-13.fc24.x86_64.rpm
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   No canary found   NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllcamlzip.so
 
 
 
@@ -54721,12 +53907,6 @@ Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RU
 xen-4.5.1-8.fc24.src.rpm
 /mnt/fedora/Packages/x/xen-ocaml-4.5.1-8.fc24.x86_64.rpm
 RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllxenbus_stubs.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllxenctrl_stubs.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllxeneventchn_stubs.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllxenlight_stubs.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllxenmmap_stubs.so
-Partial RELRO   Canary found      NX enabled    DSO             No RPATH   No RUNPATH   ./usr/lib64/ocaml/stublibs/dllxentoollog_stubs.so
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./usr/sbin/oxenstored
 
 
