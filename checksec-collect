@@ -41,6 +41,14 @@ fi
 
 for r in `find "$DIR" -name "*.x86_64.rpm" | sort`; do
     NAME=`rpm -qp $r --qf "%{name}\n" 2>/dev/null`
+    if [ "$NAME" == "dyninst-testsuite" ]; then
+        # Josh Stone <jistone redhat com>
+        # The dyninst-testsuite.rpm is a bit special.  It's not meant to be
+        # installed by most people, and the files are built with exact flags so
+        # they may test the right things.  So I think you should exclude this.
+        doLog "skipping $NAME"
+        continue
+    fi
     SOURCE=`rpm -qp $r --qf "%{SOURCERPM}\n" 2>/dev/null`
     TMPDIR=`mktemp -d /tmp/$NAME-XXXXX`
     doLog "inspecting $NAME in $TMPDIR"
